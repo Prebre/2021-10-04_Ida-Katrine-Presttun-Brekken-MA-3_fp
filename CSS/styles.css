@@ -1,82 +1,31 @@
+/******************** COLOUR PALETTE 
+#141414 - Dark gray, almost black
+#1b203d - Dark blue, "Dusty night"
+#d48911 - Yellow, "Golden"
+#bac5cf - Light blue, "Dusty sky"
+#ffffff  - White
+
+********************/
+
+/******************** MEDIA QUERIES ********************/
+@media only screen and (max-width: 1000px) {
+  .logo img {
+    width: 250px;
+  }
+
+  body {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .logo img {
+    width: 500px;
+  }
+}
+
 /******************** GLOBAL ********************/
-header {
-}
 
-.logo {
-  width: 400px;
-}
-
-nav {
-  background-color: #1b203d;
-  border-radius: 50px 0 0 50px;
-  height: 162px;
-  width: 1398px;
-  float: right;
-  position: sticky;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-}
-
-.category {
-  text-transform: uppercase;
-  padding: 0px 30px;
-  font-size: 1.5rem;
-  font-family: "American Captain", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
-}
-
-.toggle {
-  font-family: Candara, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.slider {
-}
-
-body {
-  background-color: #141414;
-  color: #bac5cf;
-  font-family: Candara, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-h1,
-h2 {
-  text-transform: uppercase;
-  font-family: "American Captain", Impact, Haettenschweiler, "Arial Narrow Bold",
-    sans-serif;
-}
-
-footer {
-  background-color: #1b203d;
-  max-height: 75px;
-  border-radius: 50px 50px 0 0;
-  font-size: 1.2rem;
-}
 /******************** LINKS ********************/
-a {
-  color: #d48911;
-  text-decoration: none;
-}
-
-nav a {
-  padding: 20px;
-}
 
 /******************** HOMEPAGE ********************/
-
-.selection--banner {
-  background-image: url("Visuals\banner_equipment.png;");
-  height: 399px;
-}
-
-.old-new--banner {
-  background-image: url("Visuals\banner_old-new.png;");
-  height: 434px;
-}
