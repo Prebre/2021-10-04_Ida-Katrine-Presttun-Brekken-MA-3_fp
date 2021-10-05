@@ -12,42 +12,48 @@
 <body>
   <header>
     <a href="index.html" class="logo"><img src="visuals/logo_dark-mode-medium.png" alt="Game Hub logo for dark theme"></a>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="current"><img src="icons/home-golden.png" alt="Homepage icon in active state">
-        <p>Home</p></a></li>
-        <li><a href="**"></a><img src="icons/games-dustysky.png" href="" alt="Product list icon in inactive state"></a></li>
-        <li><a href="**"></a><img src="icons/discount-dustysky.png" href="" alt="Sell used games icon in inactive state"></a></li>
-        <li><a href="**"></a><input type="text" placeholder="search" class="searchbar">
-          <button type="submit">
-            <img src="icons/search-dustynight.png" alt="Search icon">
-          </button>
-        </li>
-        <li><a href="**"><img src="icons/cart-dustysky.png" alt="Shopping cart icon in inactive state"></a></li>
-        <li><a href="**"><img src="icons/heart-dustysky.png" alt="Favourite icon in inactive state"></a></li>
-        <li><a href="**"><img src="icons/account-dustysky.png"  alt="Account icon in inactive state"></a></li>
-      </ul>
-      <ul>
-        <li>
-          <span class="category"><a href="**">All Games</a></span>
-        </li>
-        <li>
-          <span class="category"><a href="**">New Titles</a></span>
-        </li>
-        <li>
-          <span class="category"><a href="**">Popular Titles</a></span>
-        </li>
-        <li>
-          <span class="category"><a href="**">Old Treasures</a></span>
-        </li>
-        <li><img src="icons/sun-dustysky.png" alt="Light mode icon">
-          <label class="toggle">
-            <input type="checkbox">
-            <span class="slider"></span>
-          </label>
-          <img src="icons/moon-dustysky.png" alt="Dark mode icon">
-        </li>
-      </ul>
+    <label for="hamburger-menu"><img src="visuals/hamburger-golden.png"></i></label><nav>
+      <input type="checkbox" id="hamburger-menu">
+        <ul>
+          <li><a href="index.html"><img src="icons/home-golden.png" alt="Homepage icon in active state">
+            <p class="current">Home</p></a></li>
+          <li><a href="**"><img src="icons/games-dustysky.png" href="" alt="Product list icon in inactive state">
+            <p class="inactive">Games</p></a></li>
+          <li><a href="**"><img src="icons/discount-dustysky.png" href="" alt="Sell used games icon in inactive state">
+            <p class="inactive">Sell</p></a></li>
+          <li><a href="**"><input type="text" placeholder="search" class="searchbar">
+            <button type="submit">
+              <img src="icons/search-dustynight.png" alt="Search icon">
+            </button>
+          </li>
+          <li><a href="**"><img src="icons/cart-dustysky.png" alt="Shopping cart icon in inactive state">
+            <p class="inactive">Cart</p></a></li>
+          <li><a href="**"><img src="icons/heart-dustysky.png" alt="Favourite icon in inactive state">
+            <p class="inactive">Favourites</p></a></li>
+          <li><a href="**"><img src="icons/account-dustysky.png"  alt="Account icon in inactive state">
+            <p class="inactive">Account</p></a></li>
+        </ul>
+        <ul>
+          <li>
+            <span class="category"><a href="**">All Games</a></span>
+          </li>
+          <li>
+            <span class="category"><a href="**">New Titles</a></span>
+          </li>
+          <li>
+            <span class="category"><a href="**">Popular Titles</a></span>
+          </li>
+          <li>
+            <span class="category"><a href="**">Old Treasures</a></span>
+          </li>
+          <li><img src="icons/sun-dustysky.png" alt="Light mode icon">
+            <label class="toggle">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <img src="icons/moon-dustysky.png" alt="Dark mode icon">
+          </li>
+        </ul>
     </nav>
   </header>
   <main>
@@ -64,7 +70,7 @@
       <p>For those selling a used game, we offer the opportunity to regain  some of the money back from games which you have finished playing.</p>
       <p>For those buying games, we offer the opportunity to support a fellow gamer for a significantly lower price than an all-new game would initially cost.</p>
       <p>You can also buy brand new games, or pre-order not yet released games.</p>
-      <p class="selling-poitns">Old and loved, new and exciting</p>
+      <p class="selling-points">Old and loved, new and exciting</p>
       <p>And the most affordable prices</p>
     </section>
   </main>

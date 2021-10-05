@@ -8,24 +8,171 @@
 ********************/
 
 /******************** MEDIA QUERIES ********************/
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 1100px) {
   .logo img {
     width: 250px;
   }
 
-  body {
-    width: 90%;
+  main {
+    padding: 0px 20px;
+  }
+
+  header {
+    background-color: #1b203d;
+    margin: -10px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+
+  nav img,
+  footer img {
+    max-width: 35px;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .selling-points,
+  .selling-points + p {
+    text-align: center;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1100px) {
   .logo img {
-    width: 500px;
+    width: 400px;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  nav {
+    background-color: #1b203d;
+    flex: 1rem;
+    margin: -10px -10px 0px 100px;
+    height: 130px;
+    border-radius: 100px 0px 0px 100px;
+    padding: 10px;
+  }
+
+  nav img,
+  footer img {
+    max-width: 35px;
+  }
+
+  button {
+    size: 1rem;
+    padding: 0px;
+  }
+
+  main {
+  }
+
+  footer {
+    border-radius: 50px 50px 0px 0px;
   }
 }
 
 /******************** GLOBAL ********************/
 
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: Candara, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+li {
+  flex: 0.5rem;
+  margin: -15px 0px;
+  text-align: center;
+}
+
+.current {
+  border-top: 3px dashed #d48911;
+}
+
+.searchbar {
+  margin: 0px -5px 10px 0px;
+  height: 20px;
+  padding: 5px;
+}
+
+main {
+  width: 70%;
+  margin: 0% 20%;
+}
+
+h1,
+h2 {
+  font-family: "American Captain", "Courier New", Courier, monospace;
+  color: #bac5cf;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+footer {
+  background-color: #1b203d;
+  padding: 10px;
+  margin: 0px -10px -10px -10px;
+}
 /******************** LINKS ********************/
 
+a {
+  font-family: "American Captain", "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+  color: #d48911;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+
+footer a {
+  font-size: 1rem;
+}
+
 /******************** HOMEPAGE ********************/
+
+.selling-points {
+  font-family: "American Captain", "Courier New", Courier, monospace;
+  font-size: 2rem;
+  margin-bottom: 0px;
+  color: #bac5cf;
+  letter-spacing: 0.3rem;
+}
+
+.selling-points + p {
+  margin-top: 0px;
+}
