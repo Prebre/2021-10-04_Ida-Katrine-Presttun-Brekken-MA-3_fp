@@ -11,49 +11,77 @@
 
 @font-face {
   font-family: "American Captain";
-  src: local(../fonts/American-Captain.ttf);
+  src: url(../fonts/American-Captain.ttf);
 }
 
 @font-face {
   font-family: Candara;
-  src: local(../fonts/Candara.ttf);
+  src: url(../fonts/Candara.ttf);
 }
 
 /******************** MEDIA QUERIES ********************/
 
 @media only screen and (max-width: 1100px) {
   .logo img {
-    width: 250px;
     position: absolute;
     margin-top: 100px;
+    z-index: 2;
   }
 
   main {
-    padding: 0px 20px;
-    margin: 12% 20% 10% 20%;
+    padding: 150px 0px 60px 0px;
   }
 
   header {
     background-color: #1b203d;
     margin: -10px;
-    height: 200px;
+    height: 150px;
+    width: 100%;
+    position: fixed;
   }
 
   nav {
     display: none;
+    background: #1b203d;
+    width: 25%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  nav li {
+    flex: 1rem;
+    margin: -15px 0px;
+    text-align: center;
+  }
+
+  .hamburder-menu--checkbox {
+    weight: 35px;
   }
 
   #hamburger-menu {
     display: none;
+    position: fixed;
+    top: 10px;
+    right: 0px;
   }
 
   #hamburger-menu:checked ~ nav {
-    display: block;
+    display: flex;
+    flex-direction: row;
   }
 
   nav img,
   footer img {
-    max-width: 35px;
+    max-width: 30px;
+  }
+
+  header a,
+  footer a {
+    font-size: 1rem;
   }
 
   h1,
@@ -61,15 +89,31 @@
     text-align: center;
   }
 
+  .info {
+    padding: 2% 15%;
+  }
+
   .selling-points,
   .selling-points + p {
+    text-align: center;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  footer li {
+    flex: 1rem;
+    margin: -15px 0px;
     text-align: center;
   }
 }
 
 @media only screen and (min-width: 1100px) {
   .logo img {
-    width: 400px;
     position: fixed;
     z-index: 2;
   }
@@ -80,18 +124,34 @@
 
   nav {
     background-color: #1b203d;
-    flex: 1rem;
     margin: -10px -10px 0px 100px;
-    height: 130px;
+    height: 100px;
     width: 65%;
     border-radius: 100px 0px 0px 100px;
     padding: 10px;
-    z-index: 1;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  li {
+    flex: 1rem;
+    margin: -15px 0px;
+    text-align: center;
   }
 
   nav img,
   footer img {
     max-width: 35px;
+  }
+
+  header a,
+  footer a {
+    font-size: 1.2rem;
   }
 
   button {
@@ -100,7 +160,21 @@
   }
 
   main {
-    padding: 12% 0% 3% 0%;
+    padding: 200px 0% 40px 0%;
+  }
+
+  .info {
+    padding: 1% 25%;
+  }
+
+  .left-align {
+    text-align: right;
+    margin: 0% 50% 0% 20%;
+  }
+
+  .right-align {
+    text-align: left;
+    margin: 0% 20% 0% 50%;
   }
 
   footer {
@@ -115,11 +189,26 @@ header {
   flex-direction: row;
 }
 
+.topbar {
+  top: 0px;
+  right: 0px;
+  display: flex;
+}
+
+.logo img {
+  width: 25%;
+}
+
 nav {
   position: fixed;
   top: 0;
   right: 0;
   padding: 30px;
+  z-index: 1;
+}
+
+.purchase {
+  display: inline-block;
 }
 
 body {
@@ -127,19 +216,6 @@ body {
   color: #fff;
   font-family: Candara, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style-type: none;
-}
-
-li {
-  flex: 0.5rem;
-  margin: -15px 0px;
-  text-align: center;
 }
 
 .current {
@@ -161,7 +237,6 @@ h2 {
 
 h1 {
   font-size: 3rem;
-  border-bottom: 3px dashed #bac5cf;
   letter-spacing: 0.2rem;
   line-height: 5rem;
 }
@@ -189,10 +264,6 @@ a {
   letter-spacing: 0.1rem;
 }
 
-footer a {
-  font-size: 1rem;
-}
-
 /******************** HOMEPAGE ********************/
 
 .selection--banner {
@@ -213,10 +284,8 @@ footer a {
   border-bottom: 1px solid #1b203d;
   padding: 5% 0%;
   opacity: 0.4;
-}
-
-.info {
-  padding: 2% 20%;
+  z-index: -1;
+  position: sticky;
 }
 
 .selling-points {
@@ -229,14 +298,4 @@ footer a {
 
 .selling-points + p {
   margin-top: 0px;
-}
-
-.left-align {
-  text-align: right;
-  margin: 0% 50% 0% 20%;
-}
-
-.right-align {
-  text-align: left;
-  margin: 0% 20% 0% 50%;
 }
