@@ -46,19 +46,11 @@
     text-align: right;
   }
 
-  input .searchbar {
-    background-color: #bac5cf;
-    height: 15px;
-    width: 50px;
-    color: #1b203d;
-    font-style: italic;
-  }
-
   .hamburger-menu--checkbox {
     position: absolute;
-    width: 40px;
-    top: 30px;
-    right: 30px;
+    width: 35px;
+    top: 100px;
+    right: 20px;
     z-index: 3;
   }
 
@@ -74,9 +66,10 @@
   nav {
     display: none;
     background: #1b203d;
-    top: 50px;
+    top: 100px;
     right: 0px;
-    width: 15%;
+    width: 25%;
+    border-radius: 0px 0px 0px 50px;
   }
 
   nav ul {
@@ -125,6 +118,31 @@
     text-align: center;
   }
 
+  .error {
+    margin-top: 5%;
+  }
+
+  .error h1 {
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+  }
+
+  .error h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #d48911;
+  }
+
+  .error p {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
+  .return {
+    font-size: 1.7rem;
+  }
+
   footer ul {
     display: flex;
     flex-direction: row;
@@ -164,7 +182,7 @@
     background-color: #1b203d;
     margin: -10px -10px 0px 100px;
     padding: 10px;
-    top: 70px;
+    top: 60px;
     right: 0px;
     height: 100px;
     width: 65%;
@@ -217,6 +235,31 @@
     text-align: left;
   }
 
+  .error {
+    background-color: #1b203d;
+    margin-top: 15%;
+    border-radius: 500px;
+  }
+
+  .error h1 {
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+
+  .error h2 {
+    letter-spacing: 3px;
+    color: #d48911;
+  }
+
+  .error p {
+    font-size: 2rem;
+  }
+
+  .return {
+    font-size: 3rem;
+  }
+
   footer {
     border-radius: 50px 50px 0px 0px;
   }
@@ -237,13 +280,13 @@ header {
   right: 0px;
   z-index: 2;
   position: fixed;
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .topbar img {
-  height: 25px;
+  height: 35px;
 }
 
 .mode-switch-wrapper {
@@ -301,6 +344,30 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+form.searchbar {
+  display: flex;
+}
+form.searchbar input[type="text"] {
+  background-color: #bac5cf;
+  height: 35px;
+  width: 200px;
+  color: #1b203d;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: bold;
+  padding: 0px 0px 0px 20px;
+  border: 1px solid #141414;
+  border-radius: 25px;
+  margin: 0px 0px 5px 0px;
+}
+
+.topbar button {
+  background-color: transparent;
+  border: none;
+  margin-left: -50px;
+  align-content: center;
+}
+
 .logo img {
   width: 25%;
 }
@@ -326,12 +393,6 @@ body {
   border-top: 3px dashed #d48911;
 }
 
-.searchbar {
-  margin: 0px -5px 10px 0px;
-  padding: 5px;
-  height: 20px;
-}
-
 h1,
 h2 {
   font-family: "American Captain", "Courier New", Courier, monospace;
@@ -352,7 +413,7 @@ h2 {
 footer {
   background-color: #1b203d;
   margin: 0px -10px 0px -10px;
-  padding: 10px;
+  padding: 10px 5px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -399,8 +460,22 @@ a {
   font-size: 2rem;
   color: #bac5cf;
   letter-spacing: 0.3rem;
+  -webkit-text-stroke: 1px #1b203d;
 }
 
 .selling-points + p {
   margin-top: 0px;
+}
+
+/******************** ERROR PAGE 404 ********************/
+
+.logo--big img {
+  position: absolute;
+  width: 40%;
+  margin: 0% 30%;
+}
+.error {
+  margin-bottom: 0px;
+  padding: 20px 30%;
+  text-align: center;
 }
