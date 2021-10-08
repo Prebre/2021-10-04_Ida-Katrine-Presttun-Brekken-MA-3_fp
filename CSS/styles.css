@@ -24,41 +24,37 @@
 @media only screen and (max-width: 1100px) {
   .logo img {
     position: absolute;
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-left: 10px;
     z-index: 2;
   }
 
   main {
-    padding: 150px 0px 60px 0px;
+    padding: 150px 0px 45px 0px;
   }
 
   header {
     background-color: #1b203d;
+    position: fixed;
     margin: -10px;
     height: 150px;
     width: 100%;
-    position: fixed;
   }
 
-  nav {
-    display: none;
-    background: #1b203d;
-    width: 25%;
+  .topbar {
+    padding-top: 20px;
+    text-align: right;
   }
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
+  input .searchbar {
+    background-color: #bac5cf;
+    height: 15px;
+    width: 50px;
+    color: #1b203d;
+    font-style: italic;
   }
 
-  nav li {
-    flex: 1rem;
-    margin: -15px 0px;
-    text-align: center;
-  }
-
-  .hamburder-menu--checkbox {
+  .hamburger-menu--checkbox {
     weight: 35px;
   }
 
@@ -72,6 +68,26 @@
   #hamburger-menu:checked ~ nav {
     display: flex;
     flex-direction: row;
+  }
+
+  nav {
+    display: none;
+    background: #1b203d;
+    top: 0px;
+    right: 0px;
+    width: 25%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  nav li {
+    flex: 1rem;
+    margin: -15px 0px;
+    text-align: center;
   }
 
   nav img,
@@ -115,7 +131,14 @@
 @media only screen and (min-width: 1100px) {
   .logo img {
     position: fixed;
+    margin-top: 70px;
     z-index: 2;
+  }
+
+  .topbar {
+    text-align: center;
+    padding-top: 5px;
+    border-bottom: 3px solid #141414;
   }
 
   #hamburger-menu {
@@ -129,10 +152,12 @@
   nav {
     background-color: #1b203d;
     margin: -10px -10px 0px 100px;
+    padding: 10px;
+    top: 70px;
+    right: 0px;
     height: 100px;
     width: 65%;
     border-radius: 100px 0px 0px 100px;
-    padding: 10px;
   }
 
   ul {
@@ -172,13 +197,13 @@
   }
 
   .left-align {
-    text-align: right;
     margin: 0% 50% 0% 20%;
+    text-align: right;
   }
 
   .right-align {
-    text-align: left;
     margin: 0% 20% 0% 50%;
+    text-align: left;
   }
 
   footer {
@@ -194,15 +219,75 @@ header {
 }
 
 .topbar {
-  position: fixed;
+  background: #1b203d;
+  width: 100%;
   top: 0px;
+  left: 0px;
   right: 0px;
   z-index: 2;
-  height: 30px;
+  position: fixed;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .topbar img {
+  height: 25px;
+}
+
+.mode-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mode-switch-wrapper input {
+  display: none;
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  height: 26px;
+  width: 50px;
+}
+
+.slider {
+  background-color: #bac5cf;
+  margin: 0px 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #1b203d;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
   height: 20px;
+  width: 20px;
+  content: "";
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #1b203d;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 35px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 .logo img {
@@ -211,8 +296,6 @@ header {
 
 nav {
   position: fixed;
-  top: 0;
-  right: 0;
   padding: 30px;
   z-index: 1;
 }
@@ -234,8 +317,8 @@ body {
 
 .searchbar {
   margin: 0px -5px 10px 0px;
-  height: 20px;
   padding: 5px;
+  height: 20px;
 }
 
 h1,
@@ -257,8 +340,8 @@ h2 {
 
 footer {
   background-color: #1b203d;
-  padding: 10px;
   margin: 0px -10px 0px -10px;
+  padding: 10px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -292,16 +375,16 @@ a {
   background-size: auto;
   border-top: 1px solid #1b203d;
   border-bottom: 1px solid #1b203d;
+  position: sticky;
   padding: 5% 0%;
   opacity: 0.4;
   z-index: -1;
-  position: sticky;
 }
 
 .selling-points {
+  margin-bottom: 0px;
   font-family: "American Captain", "Courier New", Courier, monospace;
   font-size: 2rem;
-  margin-bottom: 0px;
   color: #bac5cf;
   letter-spacing: 0.3rem;
 }
