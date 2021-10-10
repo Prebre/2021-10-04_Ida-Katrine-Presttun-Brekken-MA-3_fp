@@ -1,3 +1,5 @@
+/**************************************** ASSETS ****************************************/
+
 /******************** COLOUR PALETTE 
 #141414 - Dark gray, almost black
 #1b203d - Dark blue, "Dusty night"
@@ -19,14 +21,24 @@
   src: url(../fonts/Candara.ttf);
 }
 
-/******************** MEDIA QUERIES ********************/
+/**************************************** MEDIA QUERIES ****************************************/
+
+/******************** MOBILE MEDIA ********************/
 
 @media only screen and (max-width: 1100px) {
-  .logo img {
+  .logo img,
+  .hamburger-menu--checkbox {
     position: absolute;
+  }
+
+  .logo img {
     margin-top: 110px;
     margin-left: 10px;
-    z-index: 2;
+  }
+
+  form.searchbar input[type="text"],
+  nav {
+    width: 150px;
   }
 
   main {
@@ -47,41 +59,49 @@
   }
 
   .hamburger-menu--checkbox {
-    position: absolute;
+    top: 80px;
     width: 35px;
-    top: 100px;
     right: 20px;
-    z-index: 3;
   }
 
-  #hamburger-menu {
+  #hamburger-menu,
+  nav {
     display: none;
   }
 
-  #hamburger-menu:checked ~ nav {
+  #hamburger-menu:checked ~ nav,
+  nav,
+  footer ul {
     display: flex;
+  }
+
+  #hamburger-menu:checked ~ nav,
+  footer ul {
     flex-direction: row;
   }
 
+  nav ul,
+  footer ul {
+    list-style-type: none;
+  }
+
+  nav li,
+  footer li {
+    flex: 1rem;
+  }
+
   nav {
-    display: none;
     background: #1b203d;
-    top: 100px;
-    right: 0px;
-    width: 25%;
+    top: 120px;
     border-radius: 0px 0px 0px 50px;
   }
 
   nav ul {
-    display: flex;
     flex-direction: column;
-    list-style-type: none;
   }
 
   nav li {
-    flex: 1rem;
     margin: 5px 0px;
-    text-align: center;
   }
 
   nav img {
@@ -105,7 +125,11 @@
   }
 
   h1,
-  h2 {
+  h2,
+  nav li,
+  .selling-points,
+  .selling-points p,
+  footer li {
     text-align: center;
   }
 
@@ -113,25 +137,17 @@
     padding: 2% 15%;
   }
 
-  .selling-points,
-  .selling-points + p {
-    text-align: center;
-  }
-
   .error {
-    margin-top: 5%;
+    margin-top: 7%;
   }
 
-  .error h1 {
-    font-style: italic;
-    letter-spacing: 2px;
+  .error h1,
+  .return {
     font-size: 1.7rem;
   }
 
   .error h2 {
     font-size: 2rem;
-    letter-spacing: 3px;
-    color: #d48911;
   }
 
   .error p {
@@ -139,51 +155,73 @@
     line-height: 2;
   }
 
-  .return {
-    font-size: 1.7rem;
+  .error img {
+    width: 40px;
+  }
+
+  .return img {
+    width: 20px;
+    padding-right: 5px;
   }
 
   footer ul {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    list-style-type: none;
   }
 
   footer li {
-    flex: 1rem;
     margin: -15px 0px;
-    text-align: center;
   }
 }
+
+/******************** PC MEDIA ********************/
 
 @media only screen and (min-width: 1100px) {
   .logo img {
     position: fixed;
     margin-top: 70px;
-    z-index: 2;
   }
 
   .topbar {
-    text-align: center;
     padding-top: 5px;
     border-bottom: 3px solid #141414;
   }
 
-  #hamburger-menu {
-    display: none;
+  form.searchbar input[type="text"] {
+    width: 200px;
   }
 
+  .topbar,
+  li,
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  #hamburger-menu,
   .hamburger-menu--checkbox {
     display: none;
   }
 
-  nav {
+  nav,
+  .error {
     background-color: #1b203d;
+  }
+
+  nav img,
+  footer img,
+  .return img {
+    width: 35px;
+  }
+
+  footer img,
+  .return img {
+    padding-right: 10px;
+  }
+
+  nav {
     margin: -10px -10px 0px 100px;
     padding: 10px;
     top: 60px;
-    right: 0px;
     height: 100px;
     width: 65%;
     border-radius: 100px 0px 0px 100px;
@@ -199,12 +237,6 @@
   li {
     flex: 1rem;
     margin: -15px 0px;
-    text-align: center;
-  }
-
-  nav img,
-  footer img {
-    max-width: 35px;
   }
 
   header a,
@@ -222,7 +254,7 @@
   }
 
   .info {
-    padding: 1% 25%;
+    padding: 1% 26%;
   }
 
   .left-align {
@@ -236,22 +268,11 @@
   }
 
   .error {
-    background-color: #1b203d;
     margin-top: 15%;
     border-radius: 500px;
   }
 
-  .error h1 {
-    font-style: italic;
-    letter-spacing: 2px;
-    font-size: 2rem;
-  }
-
-  .error h2 {
-    letter-spacing: 3px;
-    color: #d48911;
-  }
-
+  .error h1,
   .error p {
     font-size: 2rem;
   }
@@ -265,33 +286,126 @@
   }
 }
 
+/**************************************** GLOBAL ****************************************/
+
+/******************** SHARED ATTRIBUTES ********************/
+
+.logo img,
+.topbar {
+  z-index: 2;
+}
+
+.topbar,
+footer {
+  width: 100%;
+}
+
+.topbar,
+.slider,
+nav {
+  right: 0px;
+}
+
+.topbar,
+nav,
+footer {
+  position: fixed;
+}
+
+.topbar,
+.mode-switch-wrapper {
+  align-items: center;
+}
+
+.topbar img,
+form.searchbar input[type="text"] {
+  height: 35px;
+}
+
+.topbar,
+.slider {
+  top: 0px;
+  left: 0px;
+}
+
+.slider:before,
+input:checked + .slider,
+footer {
+  background-color: #1b203d;
+}
+
+header,
+.topbar,
+form.searchbar,
+.mode-switch-wrapper {
+  display: flex;
+}
+
+.toggle,
+.purchase {
+  display: inline-block;
+}
+
+.slider,
+form.searchbar input[type="text"] {
+  background-color: #bac5cf;
+}
+
+form.searchbar input[type="text"],
+.error h1 {
+  font-style: italic;
+}
+
+.slider,
+.slider:before,
+.logo--big img {
+  position: absolute;
+}
+
+.error h2,
+a {
+  color: #d48911;
+}
+
+h1,
+h2,
+a {
+  font-family: "American Captain", "Courier New", Courier, monospace;
+}
+
+h1,
+h2,
+.selling-points {
+  color: #bac5cf;
+}
+
+.selection--banner,
+.old-new--banner {
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-top: 1px solid #1b203d;
+  border-bottom: 1px solid #1b203d;
+  position: sticky;
+  padding: 5% 0%;
+  opacity: 0.4;
+  text-shadow: 3px 3px #141414;
+  z-index: -1;
+}
+
+.selling-points,
+.error {
+  margin-bottom: 0px;
+}
+
 /******************** GLOBAL ********************/
 
 header {
-  display: flex;
   flex-direction: row;
 }
 
 .topbar {
   background: #1b203d;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 2;
-  position: fixed;
-  display: flex;
   justify-content: space-around;
-  align-items: center;
-}
-
-.topbar img {
-  height: 35px;
-}
-
-.mode-switch-wrapper {
-  display: flex;
-  align-items: center;
 }
 
 .mode-switch-wrapper input {
@@ -299,37 +413,25 @@ header {
 }
 
 .toggle {
-  display: inline-block;
   position: relative;
   height: 26px;
   width: 50px;
 }
 
 .slider {
-  background-color: #bac5cf;
   margin: 0px 5px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  bottom: 0px;
   cursor: pointer;
   transition: 0.4s;
 }
 
 .slider:before {
-  background-color: #1b203d;
-  position: absolute;
   bottom: 4px;
   left: 4px;
   height: 20px;
   width: 20px;
   content: "";
   transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #1b203d;
 }
 
 input:checked + .slider:before {
@@ -344,16 +446,9 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-form.searchbar {
-  display: flex;
-}
 form.searchbar input[type="text"] {
-  background-color: #bac5cf;
-  height: 35px;
-  width: 200px;
   color: #1b203d;
   font-size: 0.9rem;
-  font-style: italic;
   font-weight: bold;
   padding: 0px 0px 0px 20px;
   border: 1px solid #141414;
@@ -373,13 +468,8 @@ form.searchbar input[type="text"] {
 }
 
 nav {
-  position: fixed;
   padding: 30px;
   z-index: 1;
-}
-
-.purchase {
-  display: inline-block;
 }
 
 body {
@@ -387,17 +477,12 @@ body {
   color: #fff;
   font-family: Candara, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .current {
   border-top: 3px dashed #d48911;
-}
-
-h1,
-h2 {
-  font-family: "American Captain", "Courier New", Courier, monospace;
-  color: #bac5cf;
-  text-align: center;
 }
 
 h1 {
@@ -411,20 +496,16 @@ h2 {
 }
 
 footer {
-  background-color: #1b203d;
   margin: 0px -10px 0px -10px;
   padding: 10px 5px;
-  position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
 }
+
 /******************** LINKS ********************/
 
 a {
-  font-family: "American Captain", "Courier New", Courier, monospace;
   font-size: 1.3rem;
-  color: #d48911;
   text-decoration: none;
   letter-spacing: 0.1rem;
 }
@@ -441,24 +522,9 @@ a {
   background-position: 0% 50%;
 }
 
-.selection--banner,
-.old-new--banner {
-  background-repeat: no-repeat;
-  background-size: auto;
-  border-top: 1px solid #1b203d;
-  border-bottom: 1px solid #1b203d;
-  position: sticky;
-  padding: 5% 0%;
-  opacity: 0.4;
-  text-shadow: 3px 3px #141414;
-  z-index: -1;
-}
-
 .selling-points {
-  margin-bottom: 0px;
   font-family: "American Captain", "Courier New", Courier, monospace;
   font-size: 2rem;
-  color: #bac5cf;
   letter-spacing: 0.3rem;
   -webkit-text-stroke: 1px #1b203d;
 }
@@ -470,12 +536,22 @@ a {
 /******************** ERROR PAGE 404 ********************/
 
 .logo--big img {
-  position: absolute;
   width: 40%;
   margin: 0% 30%;
 }
 .error {
-  margin-bottom: 0px;
   padding: 20px 30%;
   text-align: center;
+}
+
+.error h1 {
+  letter-spacing: 2px;
+}
+
+.error h2 {
+  letter-spacing: 3px;
+}
+
+.return {
+  border-bottom: 3px dashed #d48911;
 }
