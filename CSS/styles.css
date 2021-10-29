@@ -21,273 +21,7 @@
   src: url(../fonts/Candara.ttf);
 }
 
-/**************************************** MEDIA QUERIES ****************************************/
-
-/******************** MOBILE MEDIA ********************/
-
-@media only screen and (max-width: 1100px) {
-  .logo img,
-  .hamburger-menu--checkbox {
-    position: absolute;
-  }
-
-  .logo img {
-    margin-top: 110px;
-    margin-left: 10px;
-  }
-
-  form.searchbar input[type="text"],
-  nav {
-    width: 150px;
-  }
-
-  main {
-    padding: 160px 0% 45px 0%;
-  }
-
-  header {
-    background-color: #1b203d;
-    position: fixed;
-    margin: -10px;
-    height: 150px;
-    width: 100%;
-  }
-
-  .topbar {
-    padding-top: 20px;
-    text-align: right;
-  }
-
-  .hamburger-menu--checkbox {
-    top: 80px;
-    width: 35px;
-    right: 20px;
-  }
-
-  #hamburger-menu,
-  nav {
-    display: none;
-  }
-
-  #hamburger-menu:checked ~ nav,
-  nav,
-  footer ul {
-    display: flex;
-  }
-
-  #hamburger-menu:checked ~ nav,
-  footer ul {
-    flex-direction: row;
-  }
-
-  nav ul,
-  footer ul {
-    list-style-type: none;
-  }
-
-  nav li,
-  footer li {
-    flex: 1rem;
-  }
-
-  nav {
-    background: #1b203d;
-    top: 120px;
-    border-radius: 0px 0px 0px 50px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li {
-    margin: 5px 0px;
-  }
-
-  nav img {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
-
-  nav p {
-    margin: 5px 0px 10px 0px;
-    padding-top: 5px;
-  }
-
-  nav img,
-  footer img {
-    max-width: 30px;
-  }
-
-  header a,
-  footer a {
-    font-size: 1rem;
-  }
-
-  h1,
-  h2,
-  nav li,
-  .selling-points,
-  .selling-points p,
-  footer li {
-    text-align: center;
-  }
-
-  .info {
-    padding: 2% 15%;
-  }
-
-  .error {
-    margin-top: 7%;
-  }
-
-  .error h1,
-  .return {
-    font-size: 1.7rem;
-  }
-
-  .error h2 {
-    font-size: 2rem;
-  }
-
-  .error p {
-    font-size: 1.5rem;
-    line-height: 2;
-  }
-
-  .error img {
-    width: 40px;
-  }
-
-  .return img {
-    width: 20px;
-    padding-right: 5px;
-  }
-
-  footer ul {
-    justify-content: space-between;
-  }
-
-  footer li {
-    margin: -15px 0px;
-  }
-}
-
-/******************** PC MEDIA ********************/
-
-@media only screen and (min-width: 1100px) {
-  .logo img {
-    position: fixed;
-    margin-top: 70px;
-  }
-
-  .topbar {
-    padding-top: 5px;
-    border-bottom: 3px solid #141414;
-  }
-
-  form.searchbar input[type="text"] {
-    width: 200px;
-  }
-
-  .topbar,
-  li,
-  h1,
-  h2 {
-    text-align: center;
-  }
-
-  #hamburger-menu,
-  .hamburger-menu--checkbox {
-    display: none;
-  }
-
-  nav,
-  .error {
-    background-color: #1b203d;
-  }
-
-  nav img,
-  footer img,
-  .return img {
-    width: 35px;
-  }
-
-  footer img,
-  .return img {
-    padding-right: 10px;
-  }
-
-  nav {
-    margin: -10px -10px 0px 100px;
-    padding: 10px;
-    top: 60px;
-    height: 60px;
-    width: 65%;
-    border-radius: 100px 0px 0px 100px;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
-  }
-
-  li {
-    flex: 1rem;
-    margin: -15px 0px;
-  }
-
-  header a,
-  footer a {
-    font-size: 1.2rem;
-  }
-
-  button {
-    size: 1rem;
-    padding: 0px;
-  }
-
-  main {
-    padding: 200px 0% 40px 0%;
-  }
-
-  .info {
-    padding: 1% 26%;
-  }
-
-  .left-align {
-    margin: 0% 50% 0% 20%;
-    text-align: right;
-  }
-
-  .right-align {
-    margin: 0% 20% 0% 50%;
-    text-align: left;
-  }
-
-  .error {
-    margin-top: 15%;
-    border-radius: 500px;
-  }
-
-  .error h1,
-  .error p {
-    font-size: 2rem;
-  }
-
-  .return {
-    font-size: 3rem;
-  }
-
-  footer {
-    border-radius: 50px 50px 0px 0px;
-  }
-}
-
 /**************************************** GLOBAL ****************************************/
-
 /******************** SHARED ATTRIBUTES ********************/
 
 .logo img,
@@ -554,4 +288,269 @@ a {
 
 .return {
   border-bottom: 3px dashed #d48911;
+}
+
+/**************************************** MEDIA QUERIES ****************************************/
+
+/******************** MOBILE MEDIA ********************/
+
+@media only screen and (max-width: 1100px) {
+  .logo img,
+  .hamburger-menu--checkbox {
+    position: absolute;
+  }
+
+  .logo img {
+    margin-top: 110px;
+    margin-left: 10px;
+  }
+
+  form.searchbar input[type="text"],
+  nav {
+    width: 150px;
+  }
+
+  main {
+    padding: 160px 0% 45px 0%;
+  }
+
+  header {
+    background-color: #1b203d;
+    position: fixed;
+    margin: -10px;
+    height: 150px;
+    width: 100%;
+  }
+
+  .topbar {
+    padding-top: 20px;
+    text-align: right;
+  }
+
+  .hamburger-menu--checkbox {
+    top: 80px;
+    width: 35px;
+    right: 20px;
+  }
+
+  #hamburger-menu,
+  nav {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav,
+  nav,
+  footer ul {
+    display: flex;
+  }
+
+  #hamburger-menu:checked ~ nav,
+  footer ul {
+    flex-direction: row;
+  }
+
+  nav ul,
+  footer ul {
+    list-style-type: none;
+  }
+
+  nav li,
+  footer li {
+    flex: 1rem;
+  }
+
+  nav {
+    background: #1b203d;
+    top: 120px;
+    border-radius: 0px 0px 0px 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 5px 0px;
+  }
+
+  nav img {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  nav p {
+    margin: 5px 0px 10px 0px;
+    padding-top: 5px;
+  }
+
+  nav img,
+  footer img {
+    max-width: 30px;
+  }
+
+  header a,
+  footer a {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  nav li,
+  .selling-points,
+  .selling-points p,
+  footer li {
+    text-align: center;
+  }
+
+  .info {
+    padding: 2% 15%;
+  }
+
+  .error {
+    margin-top: 7%;
+  }
+
+  .error h1,
+  .return {
+    font-size: 1.7rem;
+  }
+
+  .error h2 {
+    font-size: 2rem;
+  }
+
+  .error p {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
+  .error img {
+    width: 40px;
+  }
+
+  .return img {
+    width: 20px;
+    padding-right: 5px;
+  }
+
+  footer ul {
+    justify-content: space-between;
+  }
+
+  footer li {
+    margin: -15px 0px;
+  }
+}
+
+/******************** PC MEDIA ********************/
+
+@media only screen and (min-width: 1100px) {
+  .logo img {
+    position: fixed;
+    margin-top: 70px;
+  }
+
+  .topbar {
+    padding-top: 5px;
+    border-bottom: 3px solid #141414;
+  }
+
+  form.searchbar input[type="text"] {
+    width: 200px;
+  }
+
+  .topbar,
+  li,
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  #hamburger-menu,
+  .hamburger-menu--checkbox {
+    display: none;
+  }
+
+  nav,
+  .error {
+    background-color: #1b203d;
+  }
+
+  nav img,
+  footer img,
+  .return img {
+    width: 35px;
+  }
+
+  footer img,
+  .return img {
+    padding-right: 10px;
+  }
+
+  nav {
+    margin: -10px -10px 0px 100px;
+    padding: 10px;
+    top: 60px;
+    height: 60px;
+    width: 65%;
+    border-radius: 100px 0px 0px 100px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  li {
+    flex: 1rem;
+    margin: -15px 0px;
+  }
+
+  header a,
+  footer a {
+    font-size: 1.2rem;
+  }
+
+  button {
+    size: 1rem;
+    padding: 0px;
+  }
+
+  main {
+    padding: 200px 0% 40px 0%;
+  }
+
+  .info {
+    padding: 1% 26%;
+  }
+
+  .left-align {
+    margin: 0% 50% 0% 20%;
+    text-align: right;
+  }
+
+  .right-align {
+    margin: 0% 20% 0% 50%;
+    text-align: left;
+  }
+
+  .error {
+    margin-top: 15%;
+    border-radius: 500px;
+  }
+
+  .error h1,
+  .error p {
+    font-size: 2rem;
+  }
+
+  .return {
+    font-size: 3rem;
+  }
+
+  footer {
+    border-radius: 50px 50px 0px 0px;
+  }
 }
