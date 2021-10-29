@@ -11,7 +11,7 @@
 
 <body class="variables">
   <header>
-    <a href="index.html" class="logo"><img src="visuals/logo_dark-mode-medium.png" alt="Game Hub logo for dark theme"></a>
+    <a href="index.html" class="logo shrink"><img src="visuals/logo_dark-mode-medium.png" alt="Game Hub logo for dark theme"></a>
     <section class="topbar">
       <div class="mode-switch-wrapper"><img src="icons/moon-dustysky.png" alt="Dark mode icon">
         <label class="toggle" for="checkbox">
@@ -49,7 +49,20 @@
         </nav>
     </header>
   <main>
-    <h1>Contact us</h1>
+    <h1>Sell game</h1>
+    <section class="page-form">
+      <form>
+        <label for="seller-name">Name*</label>
+        <input type="text" id="seller-name" name="seller-name"><br>
+        <label for="seller-mail">E-mail*</label>
+        <input type="email" id="seller-mail" name="seller-mail"><br>
+        <label for="seller-game-title">Game Title*</label>
+        <input type="text" id="seller-game-title" name="seller-game-title"><br>
+        <label for="seller-description">Description*</label>
+        <input type="textarea" id="seller-description" name="seller-description"><br>
+        <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
+      </form>
+      </section>
   </main>
 </body>
 <footer>
