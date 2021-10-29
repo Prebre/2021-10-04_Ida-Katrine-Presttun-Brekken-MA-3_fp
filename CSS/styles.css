@@ -12,7 +12,7 @@
 /******************** FONTS ********************/
 
 @font-face {
-  font-family: "American Captain";
+  font-family: "American Captain"; /* ONLY FOR PERSONAL USE */
   src: url(../fonts/American-Captain.ttf);
 }
 
@@ -22,6 +22,19 @@
 }
 
 /**************************************** GLOBAL ****************************************/
+/******************** CSS VARIABLES ********************/
+
+.variables {
+  --darkmode: #141414;
+  --dusty-night: #1b203d;
+  --golden: #d48911;
+  --dusty-sky: #bac5cf;
+  --white: #ffffff;
+  --captain: "American Captain", "Courier New", Courier, monospace;
+  --candara: Candara, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
 /******************** SHARED ATTRIBUTES ********************/
 
 .logo img,
@@ -65,7 +78,7 @@ form.searchbar input[type="text"] {
 .slider:before,
 input:checked + .slider,
 footer {
-  background-color: #1b203d;
+  background-color: var(--dusty-night);
 }
 
 header,
@@ -98,13 +111,13 @@ form.searchbar input[type="text"],
 
 .error h2,
 a {
-  color: #d48911;
+  color: var(--golden);
 }
 
 h1,
 h2,
 a {
-  font-family: "American Captain", "Courier New", Courier, monospace;
+  font-family: var(--captain);
 }
 
 h1,
@@ -117,12 +130,12 @@ h2,
 .old-new--banner {
   background-repeat: no-repeat;
   background-size: auto;
-  border-top: 1px solid #1b203d;
-  border-bottom: 1px solid #1b203d;
+  border-top: 1px solid var(--dusty-night);
+  border-bottom: 1px solid var(--dusty-night);
   position: sticky;
   padding: 5% 0%;
   opacity: 0.4;
-  text-shadow: 3px 3px #141414;
+  text-shadow: 3px 3px var(--darkmode);
   z-index: -1;
 }
 
@@ -181,7 +194,7 @@ input:checked + .slider:before {
 }
 
 form.searchbar input[type="text"] {
-  color: #1b203d;
+  color: var(--dusty-night);
   font-size: 0.9rem;
   font-weight: bold;
   padding: 0px 0px 0px 20px;
@@ -207,10 +220,9 @@ nav {
 }
 
 body {
-  background-color: #141414;
+  background-color: var(--darkmode);
   color: #fff;
-  font-family: Candara, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: var(--candara);
   font-size: 1.2rem;
   line-height: 1.6;
 }
@@ -257,7 +269,7 @@ a {
 }
 
 .selling-points {
-  font-family: "American Captain", "Courier New", Courier, monospace;
+  font-family: var(--captain);
   font-size: 2rem;
   letter-spacing: 0.3rem;
   -webkit-text-stroke: 1px #1b203d;
@@ -287,7 +299,7 @@ a {
 }
 
 .return {
-  border-bottom: 3px dashed #d48911;
+  border-bottom: 3px dashed var(--golden);
 }
 
 /**************************************** MEDIA QUERIES ****************************************/
@@ -315,7 +327,7 @@ a {
   }
 
   header {
-    background-color: #1b203d;
+    background-color: var(--dusty-night);
     position: fixed;
     margin: -10px;
     height: 150px;
@@ -452,7 +464,7 @@ a {
 
   .topbar {
     padding-top: 5px;
-    border-bottom: 3px solid #141414;
+    border-bottom: 3px solid var(--darkmode);
   }
 
   form.searchbar input[type="text"] {
@@ -473,7 +485,7 @@ a {
 
   nav,
   .error {
-    background-color: #1b203d;
+    background-color: var(--dusty-night);
   }
 
   nav img,
