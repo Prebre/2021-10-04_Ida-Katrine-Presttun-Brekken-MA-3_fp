@@ -127,7 +127,7 @@ h2,
 }
 
 .selection--banner,
-.old-new--banner {
+.timeless--banner {
   background-repeat: no-repeat;
   background-size: auto;
   border-top: 1px solid var(--dusty-night);
@@ -263,8 +263,8 @@ a {
   background-position: 100% 50%;
 }
 
-.old-new--banner {
-  background-image: url("../visuals/banner_old-new-medium.png");
+.timeless--banner {
+  background-image: url("../visuals/banner_timeless-medium.png");
   background-position: 0% 50%;
 }
 
