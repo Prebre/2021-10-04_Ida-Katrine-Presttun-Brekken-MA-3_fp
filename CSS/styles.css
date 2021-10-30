@@ -235,6 +235,41 @@ main {
   border-top: 3px dashed #d48911;
 }
 
+.cta {
+  background-color: var(--golden);
+  color: var(--dusty-sky);
+  border: 3px solid var(--dusty-night);
+  border-radius: 15px;
+  font-family: var(--captain);
+  -webkit-text-stroke: 1px var(--dusty-night);
+  letter-spacing: 3px;
+  margin-left: 20px;
+}
+
+.inactive {
+  background-color: var(--dusty-sky);
+  color: var(--white);
+}
+
+.info-table table,
+.info-table th,
+.info-table td {
+  border: 2px solid var(--dusty-night);
+  text-align: center;
+}
+
+.info-table table {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.info-table th {
+  background-color: var(--dusty-night);
+  color: var(--golden);
+  font-family: var(--captain);
+  letter-spacing: 3px;
+}
+
 h1 {
   font-size: 3rem;
   letter-spacing: 0.2rem;
@@ -257,7 +292,6 @@ footer {
 a {
   color: var(--golden);
   font-family: var(--captain);
-  font-size: 1.3rem;
   text-decoration: none;
   letter-spacing: 0.1rem;
 }
@@ -269,12 +303,12 @@ a :hover {
 /******************** FORMS ********************/
 
 .page-form {
-  margin: 0 30%;
+  margin: 0 30% 50px;
   text-align: right;
 }
 
 .account-form {
-  margin: 0 25%;
+  margin: 0 25% 50px;
   text-align: right;
   display: flex;
   flex-direction: row;
@@ -316,17 +350,6 @@ input[type="date"] {
   font-style: italic;
   border: 1px solid var(--darkmode);
   border-radius: 15px;
-}
-
-.cta {
-  background-color: var(--golden);
-  color: var(--dusty-sky);
-  border: 3px solid var(--dusty-night);
-  border-radius: 15px;
-  font-family: var(--captain);
-  -webkit-text-stroke: 1px var(--dusty-night);
-  letter-spacing: 3px;
-  margin-left: 20px;
 }
 
 /******************** HOMEPAGE ********************/
@@ -375,28 +398,6 @@ input[type="date"] {
   color: var(--golden);
 }
 
-.customer-info table,
-.customer-info th,
-.customer-info td {
-  border: 2px solid var(--dusty-night);
-  text-align: center;
-}
-
-.customer-info table {
-  width: 100%;
-}
-
-.customer-info th {
-  background-color: var(--dusty-night);
-  color: var(--golden);
-  font-family: var(--captain);
-  font-size: 2rem;
-}
-
-.customer-info {
-  margin: 30px 50px 0px;
-}
-
 .italic {
   font-style: italic;
   font-size: 1rem;
@@ -406,6 +407,33 @@ input[type="date"] {
   border-bottom: 1px solid var(--golden);
 }
 
+/******************** PRODUCT LIST ********************/
+
+.cover--small {
+  height: 150px;
+}
+
+.pricetag {
+  color: var(--golden);
+  font-family: var(--captain);
+}
+
+.review {
+  position: relative;
+  background: var(--dusty-sky);
+  margin: auto;
+  z-index: -1;
+}
+
+.second-hand {
+  color: var(--dusty-sky);
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.second-hand img {
+  width: 25px;
+}
 /******************** ERROR PAGE 404 ********************/
 
 .logo--big img {
@@ -454,7 +482,7 @@ input[type="date"] {
   }
 
   main {
-    padding: 160px 0% 45px 0%;
+    padding: 160px 0% 0 0%;
   }
 
   header {
@@ -539,6 +567,8 @@ input[type="date"] {
   nav li,
   .selling-points,
   .selling-points p,
+  .left-align,
+  .right-align,
   footer li {
     text-align: center;
   }
@@ -552,12 +582,24 @@ input[type="date"] {
     font-size: 1rem;
   }
 
-  .customer-info th {
+  .info-table {
+    margin: 25px 5px;
+    font-size: 1rem;
+  }
+
+  .info-table th {
     font-size: 1.6rem;
   }
 
-  .customer-info a {
-    font-size: 1rem;
+  .review {
+    border-radius: 20px;
+    width: 100px;
+    padding: 6px 3px 3px 3px;
+    margin: auto;
+  }
+
+  .review img {
+    width: 15px;
   }
 
   .italic {
@@ -591,6 +633,14 @@ input[type="date"] {
   input[type="textarea"] {
     width: 250px;
     height: 200px;
+  }
+
+  .game-title {
+    font-size: 1.8rem;
+  }
+
+  .pricetag {
+    font-size: 2rem;
   }
 
   .cta {
@@ -711,7 +761,7 @@ input[type="date"] {
   }
 
   main {
-    padding: 200px 0% 40px 0%;
+    padding: 200px 0% 1px 0%;
   }
 
   .info {
@@ -728,15 +778,31 @@ input[type="date"] {
     text-align: left;
   }
 
-  .customer-info table,
-  .customer-info th,
-  .customer-info td {
+  .info-table {
+    margin: 50px 5%;
+    font-size: 1rem;
+  }
+
+  .info-table table,
+  .info-table th,
+  .info-table td {
     border: 2px solid var(--dusty-night);
     text-align: center;
   }
 
-  .customer-info th {
+  .info-table th {
     font-size: 2rem;
+  }
+
+  .review {
+    border-radius: 30px;
+    width: 120px;
+    padding: 8px 4px 4px 4px;
+    margin: auto;
+  }
+
+  .review img {
+    width: 20px;
   }
 
   .italic {
@@ -765,6 +831,14 @@ input[type="date"] {
   input[type="textarea"] {
     width: 450px;
     height: 250px;
+  }
+
+  .game-title {
+    font-size: 2.5rem;
+  }
+
+  .pricetag {
+    font-size: 3rem;
   }
 
   .cta {
