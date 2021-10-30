@@ -51,17 +51,38 @@
   <main>
     <h1>Contact form</h1>
     <section class="page-form">
-      <form>
-        <label for="contact-name">Name*</label>
-        <input type="text" id="contact-name" name="contact-name"><br>
-        <label for="contact-mail">E-mail*</label>
-        <input type="email" id="contact-mail" name="contact-mail"><br>
-        <label for="contact-subject">Subject*</label>
-        <input type="text" id="contact-subject" name="contact-subject"><br>
-        <label for="contact-message">Message*</label>
-        <input type="textarea" id="contact-message" name="contact-message"><br>
-        <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
-      </form>
+      <table>
+        <form>
+          <tr>
+            <td class="input-info">
+              <label for="contact-name">Name*</label>
+              <input type="text" id="contact-name" name="contact-name">
+            </td>
+          </tr>
+          <tr>
+            <td class="input-info">
+              <label for="contact-mail">E-mail*</label>
+              <input type="email" id="contact-mail" name="contact-mail">
+            </td>
+          </tr>
+          <tr>
+            <td class="input-info">
+              <label for="contact-subject">Subject*</label>
+              <input type="text" id="contact-subject" name="contact-subject">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="contact-message">Message*</label>
+              <input type="textarea" id="contact-message" name="contact-message">
+            </td>
+          </tr>
+          <tr>
+            <td class="form-centered">
+              <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
+            </td>
+          </tr>
+        </form>
       </section>
   </main>
 </body>

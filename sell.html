@@ -51,18 +51,39 @@
   <main>
     <h1>Sell game</h1>
     <section class="page-form">
-      <form>
-        <label for="seller-name">Name*</label>
-        <input type="text" id="seller-name" name="seller-name"><br>
-        <label for="seller-mail">E-mail*</label>
-        <input type="email" id="seller-mail" name="seller-mail"><br>
-        <label for="seller-game-title">Game Title*</label>
-        <input type="text" id="seller-game-title" name="seller-game-title"><br>
-        <label for="seller-description">Description*</label>
-        <input type="textarea" id="seller-description" name="seller-description"><br>
-        <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
-      </form>
-      </section>
+      <table>
+        <form>
+          <tr>
+            <td class="input-info">
+              <label for="seller-name">Name*</label>
+              <input type="text" id="seller-name" name="seller-name">
+            </td>
+          </tr>
+          <tr>
+            <td class="input-info">
+              <label for="seller-mail">E-mail*</label>
+              <input type="email" id="seller-mail" name="seller-mail">
+            </td>
+          </tr>
+          <tr>
+            <td class="input-info">
+              <label for="seller-game-title">Game Title*</label>
+            <input type="text" id="seller-game-title" name="seller-game-title">
+            </td>
+          </tr>
+            <td>
+              <label for="seller-description">Description*</label>
+              <input type="textarea" id="seller-description" name="seller-description">
+            </td>
+          </tr>
+          <tr>
+            <td class="form-centered">
+              <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
+            </td>
+          </tr>
+        </form>
+      </table>
+    </section>
   </main>
 </body>
 <footer>

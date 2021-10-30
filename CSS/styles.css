@@ -229,6 +229,10 @@ body {
   line-height: 1.6;
 }
 
+main {
+  margin-bottom: 70px;
+}
+
 .current {
   border-top: 3px dashed #d48911;
 }
@@ -285,11 +289,11 @@ a {
 
 .page-form {
   margin: 0 30%;
-  text-align: center;
+  text-align: right;
 }
 
 .account-form {
-  margin: 0 20%;
+  margin: 0 25%;
   text-align: right;
 }
 
@@ -297,9 +301,18 @@ a {
   margin-bottom: 20px;
 }
 
-.colspan-2 {
+.form-centered {
   text-align: center;
   padding-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.input-info {
+  padding-right: 70px;
 }
 
 input[type="text"],
@@ -308,7 +321,6 @@ input[type="tel"],
 input[type="number"],
 input[type="password"] {
   width: 250px;
-  padding: 5px;
 }
 
 input[type="text"],
@@ -320,8 +332,13 @@ input[type="password"],
 input[type="date"] {
   background: var(--dusty-sky);
   color: var(--dusty-night);
-  border-radius: 15px;
   margin: 10px;
+  padding: 5px 10px;
+  font-family: var(--candara);
+  font-size: 0.9rem;
+  font-style: italic;
+  border-radius: 15px;
+  border: 1px solid var(--darkmode);
 }
 
 input[type="textarea"] {
@@ -380,9 +397,13 @@ input[type="textarea"] {
     margin-left: 10px;
   }
 
-  form.searchbar input[type="text"],
+  form.searchbar input[type="text"] {
+    width: 150px;
+  }
+
   nav {
     width: 150px;
+    display: none;
   }
 
   main {
@@ -408,13 +429,11 @@ input[type="textarea"] {
     right: 20px;
   }
 
-  #hamburger-menu,
-  nav {
+  #hamburger-menu {
     display: none;
   }
 
   #hamburger-menu:checked ~ nav,
-  nav,
   footer ul {
     display: flex;
   }
