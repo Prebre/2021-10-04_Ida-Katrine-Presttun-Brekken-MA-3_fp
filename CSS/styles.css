@@ -109,14 +109,12 @@ form.searchbar input[type="text"],
   position: absolute;
 }
 
-.error h2,
-a {
+.error h2 {
   color: var(--golden);
 }
 
 h1,
-h2,
-a {
+h2 {
   font-family: var(--captain);
 }
 
@@ -257,9 +255,78 @@ footer {
 /******************** LINKS ********************/
 
 a {
+  color: var(--golden);
+  font-family: var(--captain);
   font-size: 1.3rem;
   text-decoration: none;
   letter-spacing: 0.1rem;
+}
+
+a :hover {
+  color: var(--dusty-sky);
+  transition: color 0.5s ease;
+}
+/******************** FORMS ********************/
+
+.page-form {
+  margin: 0 30%;
+  text-align: right;
+}
+
+.account-form {
+  margin: 0 25%;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: space-around;
+}
+
+.account-form tr {
+  margin-bottom: 20px;
+}
+
+.form-centered {
+  text-align: center;
+  padding-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.input-info {
+  padding-right: 70px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="textarea"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="date"] {
+  background: var(--dusty-sky);
+  color: var(--dusty-night);
+  margin: 10px;
+  font-family: var(--candara);
+  font-style: italic;
+  border: 1px solid var(--darkmode);
+  border-radius: 15px;
+}
+
+.cta {
+  background-color: var(--golden);
+  color: var(--dusty-sky);
+  border: 3px solid var(--dusty-night);
+  border-radius: 15px;
+  font-family: var(--captain);
+  -webkit-text-stroke: 1px var(--dusty-night);
+  letter-spacing: 3px;
+  margin-left: 20px;
 }
 
 /******************** HOMEPAGE ********************/
@@ -285,78 +352,58 @@ a {
   margin-top: 0px;
 }
 
-/******************** FORMS ********************/
+/******************** ACCOUNT PROFILE ********************/
 
-.page-form {
+.profile-info {
   margin: 0 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: space-around;
+}
+
+.table-right {
   text-align: right;
+  padding: 0px 15px 0 20px;
 }
 
-.account-form {
-  margin: 0 25%;
-  text-align: right;
+.table-left {
+  text-align: left;
+  padding: 0px 20px 0 15px;
+  color: var(--golden);
 }
 
-.account-form tr {
-  margin-bottom: 20px;
-}
-
-.form-centered {
+.customer-info table,
+.customer-info th,
+.customer-info td {
+  border: 2px solid var(--dusty-night);
   text-align: center;
-  padding-top: 20px;
 }
 
-table {
-  border-collapse: collapse;
-  padding: 3px;
+.customer-info table {
+  width: 100%;
 }
 
-.input-info {
-  padding-right: 70px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="password"] {
-  width: 250px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="textarea"],
-input[type="tel"],
-input[type="number"],
-input[type="password"],
-input[type="date"] {
-  background: var(--dusty-sky);
-  color: var(--dusty-night);
-  margin: 10px;
-  padding: 5px 10px;
-  font-family: var(--candara);
-  font-size: 0.9rem;
-  font-style: italic;
-  border-radius: 15px;
-  border: 1px solid var(--darkmode);
-}
-
-input[type="textarea"] {
-  width: 450px;
-  height: 250px;
-}
-
-.cta {
-  background-color: var(--golden);
-  color: var(--dusty-sky);
-  border: 3px solid var(--dusty-night);
+.customer-info th {
+  background-color: var(--dusty-night);
+  color: var(--golden);
   font-family: var(--captain);
   font-size: 2rem;
-  -webkit-text-stroke: 1px var(--dusty-night);
-  border-radius: 15px;
-  padding: 5px 20px;
-  letter-spacing: 3px;
-  margin-left: 20px;
+}
+
+.customer-info {
+  margin: 30px 50px 0px;
+}
+
+.italic {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.underline {
+  border-bottom: 1px solid var(--golden);
 }
 
 /******************** ERROR PAGE 404 ********************/
@@ -500,6 +547,57 @@ input[type="textarea"] {
     padding: 2% 15%;
   }
 
+  .table-left,
+  .table-right {
+    font-size: 1rem;
+  }
+
+  .customer-info th {
+    font-size: 1.6rem;
+  }
+
+  .customer-info a {
+    font-size: 1rem;
+  }
+
+  .italic {
+    font-size: 0.8rem;
+  }
+
+  .account-form,
+  .page-form {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"] {
+    width: 150px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="textarea"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"] {
+    padding: 3px 8px;
+    font-size: 0.7rem;
+  }
+
+  input[type="textarea"] {
+    width: 250px;
+    height: 200px;
+  }
+
+  .cta {
+    font-size: 1.5rem;
+    padding: 3px 15px;
+  }
+
   .error {
     margin-top: 7%;
   }
@@ -628,6 +726,50 @@ input[type="textarea"] {
   .right-align {
     margin: 0% 20% 0% 50%;
     text-align: left;
+  }
+
+  .customer-info table,
+  .customer-info th,
+  .customer-info td {
+    border: 2px solid var(--dusty-night);
+    text-align: center;
+  }
+
+  .customer-info th {
+    font-size: 2rem;
+  }
+
+  .italic {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"] {
+    width: 250px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="textarea"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"] {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  input[type="textarea"] {
+    width: 450px;
+    height: 250px;
+  }
+
+  .cta {
+    font-size: 2rem;
+    padding: 5px 20px;
   }
 
   .error {
