@@ -244,6 +244,7 @@ main {
   -webkit-text-stroke: 1px var(--dusty-night);
   letter-spacing: 3px;
   margin-left: 20px;
+  margin-bottom: 50px;
 }
 
 .inactive {
@@ -254,7 +255,6 @@ main {
 .info-table table,
 .info-table th,
 .info-table td {
-  border: 2px solid var(--dusty-night);
   text-align: center;
 }
 
@@ -268,6 +268,14 @@ main {
   color: var(--golden);
   font-family: var(--captain);
   letter-spacing: 3px;
+}
+
+.table-top {
+  border-top: 5px solid var(--dusty-night);
+}
+
+.table-border {
+  border: 3px solid var(--dusty-night);
 }
 
 h1 {
@@ -410,7 +418,8 @@ input[type="date"] {
 /******************** PRODUCT LIST ********************/
 
 .cover--small {
-  height: 150px;
+  height: 20rem;
+  margin: 30px auto 60px auto;
 }
 
 .pricetag {
@@ -786,7 +795,7 @@ input[type="date"] {
   .info-table table,
   .info-table th,
   .info-table td {
-    border: 2px solid var(--dusty-night);
+    /*border: 1px solid var(--dusty-night);*/
     text-align: center;
   }
 
