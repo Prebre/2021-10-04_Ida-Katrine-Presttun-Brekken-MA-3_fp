@@ -638,6 +638,10 @@ label {
     font-size: 1.6rem;
   }
 
+  .cover--big {
+    height: 20rem;
+  }
+
   .cover--small {
     height: 10rem;
   }
@@ -675,7 +679,7 @@ label {
   input[type="tel"],
   input[type="number"],
   input[type="password"] {
-    width: 250px;
+    width: 175px;
   }
 
   input[type="text"],
@@ -862,6 +866,10 @@ label {
 
   .info-table th {
     font-size: 2rem;
+  }
+
+  .cover--big {
+    height: 25rem;
   }
 
   .cover--small {
