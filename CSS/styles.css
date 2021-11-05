@@ -247,18 +247,21 @@ main {
   margin-bottom: 50px;
 }
 
+.table-space {
+  padding-top: 20px;
+}
 .inactive {
   background-color: var(--dusty-sky);
   color: var(--white);
 }
 
 .info-table table,
-.info-table th,
-.info-table td {
+.checkout-table table {
   text-align: center;
 }
 
-.info-table table {
+.info-table table,
+.checkout-table table {
   width: 100%;
   margin-bottom: 50px;
 }
@@ -270,12 +273,30 @@ main {
   letter-spacing: 3px;
 }
 
-.table-top {
+.checkout-table th {
+  color: var(--golden);
+  font-family: var(--captain);
+  letter-spacing: 3px;
+}
+
+.border-top {
   border-top: 5px solid var(--dusty-night);
+}
+
+.border-right {
+  border-right: 5px solid var(--dusty-night);
 }
 
 .table-border {
   border: 3px solid var(--dusty-night);
+}
+
+.white {
+  color: var(--white);
+}
+
+.bold {
+  font-weight: bolder;
 }
 
 h1 {
@@ -309,12 +330,6 @@ a :hover {
   transition: color 0.5s ease;
 }
 /******************** FORMS ********************/
-
-.page-form {
-  margin: 0 30% 50px;
-  text-align: right;
-}
-
 .account-form {
   margin: 0 25% 50px;
   text-align: right;
@@ -360,6 +375,10 @@ input[type="date"] {
   border-radius: 15px;
 }
 
+label {
+  padding-left: 40px;
+}
+
 /******************** HOMEPAGE ********************/
 
 .selection--banner {
@@ -403,6 +422,9 @@ input[type="date"] {
 .table-left {
   text-align: left;
   padding: 0px 20px 0 15px;
+}
+
+.golden {
   color: var(--golden);
 }
 
@@ -418,7 +440,6 @@ input[type="date"] {
 /******************** PRODUCT LIST ********************/
 
 .cover--small {
-  height: 20rem;
   margin: 30px auto 60px auto;
 }
 
@@ -443,6 +464,22 @@ input[type="date"] {
 .second-hand img {
   width: 25px;
 }
+
+/******************** CHECKOUT ********************/
+
+.pay-icon {
+  width: 25px;
+  padding-right: 10px;
+}
+
+.dusty-sky {
+  color: var(--dusty-sky);
+}
+
+.order-info {
+  margin: 0 30% 2%;
+}
+
 /******************** ERROR PAGE 404 ********************/
 
 .logo--big img {
@@ -591,7 +628,8 @@ input[type="date"] {
     font-size: 1rem;
   }
 
-  .info-table {
+  .info-table,
+  .checkout-table {
     margin: 25px 5px;
     font-size: 1rem;
   }
@@ -600,15 +638,23 @@ input[type="date"] {
     font-size: 1.6rem;
   }
 
+  .cover--small {
+    height: 10rem;
+  }
+
+  .cover--smallest {
+    height: 5rem;
+  }
+
   .review {
     border-radius: 20px;
-    width: 100px;
-    padding: 6px 3px 3px 3px;
+    width: 80px;
+    padding: 3px 2px 2px 2px;
     margin: auto;
   }
 
   .review img {
-    width: 15px;
+    width: 12px;
   }
 
   .italic {
@@ -620,12 +666,16 @@ input[type="date"] {
     font-size: 1rem;
   }
 
+  .page-form {
+    margin: 0 25% 50px;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
   input[type="number"],
   input[type="password"] {
-    width: 150px;
+    width: 250px;
   }
 
   input[type="text"],
@@ -645,11 +695,11 @@ input[type="date"] {
   }
 
   .game-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .pricetag {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .cta {
@@ -787,20 +837,39 @@ input[type="date"] {
     text-align: left;
   }
 
-  .info-table {
+  .page-form {
+    margin: 0 35% 50px;
+  }
+
+  .info-table,
+  .checkout-table {
     margin: 50px 5%;
+  }
+
+  .info-table {
     font-size: 1rem;
+  }
+
+  .checkout-table th {
+    font-size: 1.5rem;
   }
 
   .info-table table,
   .info-table th,
   .info-table td {
-    /*border: 1px solid var(--dusty-night);*/
     text-align: center;
   }
 
   .info-table th {
     font-size: 2rem;
+  }
+
+  .cover--small {
+    height: 15rem;
+  }
+
+  .cover--smallest {
+    height: 7rem;
   }
 
   .review {
@@ -823,7 +892,7 @@ input[type="date"] {
   input[type="tel"],
   input[type="number"],
   input[type="password"] {
-    width: 250px;
+    width: 450px;
   }
 
   input[type="text"],
@@ -847,7 +916,7 @@ input[type="date"] {
   }
 
   .pricetag {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .cta {

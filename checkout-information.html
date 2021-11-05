@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Make sure all the information is correct.">
+  <title>Game Hub | Your Cart</title>
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="variables">
+  <header>
+    <a href="index.html" class="logo shrink" title="home"><img src="visuals/logo_dark-mode-medium.png" alt="Game Hub logo for dark theme"></a>
+    <section class="topbar">
+      <div class="mode-switch-wrapper"><img src="icons/moon-dustysky.png" alt="Dark mode icon">
+        <label class="toggle" for="checkbox">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <img src="icons/sun-dustysky.png" alt="Light mode icon">
+      </div>
+        <form class="searchbar" action="404.html">
+          <input type="text" placeholder="search">
+          <button type="submit">
+            <img class="search-button" src="icons/search-dustynight.png" alt="Search icon">
+          </button>
+          </form>
+      <div class="purchase">
+        <a href="checkout-cart.html" title="cart"><img src="icons/cart-golden.png" alt="Shopping cart icon in active state">
+          <span class="current">Cart</span></a>
+      </div>
+    </section>
+    <label for="hamburger-menu"><img src="icons/hamburger-golden.png" class="hamburger-menu--checkbox" alt="Menu icon for mobile devices"></label>
+    <input type="checkbox" id="hamburger-menu">
+        <nav>
+          <ul>
+            <li><a href="index.html" title="home"><img src="icons/home-dustysky.png" alt="Homepage icon in inactive state">
+              <p>Home</p></a></li>
+            <li><a href="games.html"" title="products"><img src="icons/games-dustysky.png" href="" alt="Product list icon in inactive state">
+              <p>Games</p></a></li>
+            <li><a href="sell.html" title="sell used games"><img src="icons/discount-dustysky.png" href="" alt="Sell used games icon in inactive state">
+              <p>Sell</p></a></li>
+            <li><a href="404.html" title="favourites"><img src="icons/heart-dustysky.png" alt="Favourite icon in inactive state">
+              <p>Favourites</p></a></li>
+            <li><a href="account-profile.html" title="account"><img src="icons/account-dustysky.png"  alt="Account icon in inactive state">
+              <p>Account</p></a></li>
+          </ul>
+        </nav>
+    </header>
+  <main>
+    <h1>Checkout Information</h1>
+    <section class="checkout-table">
+      <table>
+        <tr>
+          <th>Method of Payment</th>
+          <th colspan="2">Billing Information</th>
+          <th colspan="2">Shipping Information</th>
+        </tr>
+        <tr>
+          <td rowspan="3" class="table-left">
+            <input type="radio" id="card" name="payment">
+              <label for="card" class="bold">Credit or Debit card</label><br>
+            <label for="visa-number">Card number</label>
+              <input type="number" id="card-number" name="card-number" value="Your card number"><br>
+            <label for="card-holder">Name on card</label>
+              <input type="text" id="card-holder" name="card-holder" value="Name of card holder"><br>
+            <label for="card-expire">Expiration date</label>
+              <input type="month" id="card-expire" name="card-expire" value="Month of year of expiration"><br>
+            <label for="card-code">Security Code</label>
+              <input type="number" id="card-code" name="card-code" value="Card security code"><br>
+              <img src="Icons/payment-visa.png" alt="Visa icon" class="pay-icon"><img src="Icons/paymeny-mastercard.png" alt="MasterCard icon" class="pay-icon"><br>
+            <input type="radio" id="paypal" name="payment"><img src="Icons/payment-paypal.png" alt="PayPal icon" class="pay-icon">
+              <label for="paypal" class="bold">PayPal</label>
+              <p class="italic dusty-sky">PayPal login will open in a new window.</p>
+          </td>
+          <td class="table-right bold">
+            <p>Name:</p>
+          </td>
+          <td class="table-left golden">
+            <p>Jane Doe</p>
+          </td>
+          <td colspan="2">
+            <p class="italic dusty-sky"><input type="radio" id="shipping" name="shipping">Shipping address is the same as billing address</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-right bold">
+            <p>Address:</p>
+          </td>
+          <td class="table-left golden">
+            <p>42 Lol Street<br>
+            1337 Paper Town<br>
+          Fantasia</p>
+          </td>
+          <td class="table-right bold">
+            <p>Name:</p>
+          </td>
+          <td class="table-left golden">
+            <p>Jane Doe</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+          <td>
+            <p class="table-right bold">Address:</p>
+          </td>
+          <td class="table-left golden">
+            <p>42 Lol Street<br>
+            1337 Paper Town<br>
+          Fantasia</p>
+        </td>
+        </tr>
+        <tr>
+          <td colspan="5" class="table-space">
+            <a href="index.html" title="home">Cancel</a><a href="checkout-success.html" title="Checkout Success page" class="cta">Next</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
+<footer>
+  <ul>
+    <li><a href="404.html" title="share"><img src="icons/share-dustysky.png" alt="Share icon in inactive state">
+      <span>Share</span></a>
+    </li>
+    <li><a href="404.html" title="frequently asked questions"><img src="icons/faq-dustysky.png" alt="FAQ icon in inactive state">
+      <span>FAQ</span></a>
+    </li>
+    <li><a href="contact.html" title="contact"><img src="icons/mail-dustysky.png" alt="Contact icon in inactive state">
+      <span>Contact</span>
+      </a>
+    </li>
+  </ul>
+</footer>

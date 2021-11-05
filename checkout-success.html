@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Product page for Boyfriend Dungeon.">
-  <title>Game Hub | Boyfriend Dungeon</title>
+  <meta name="description" content="Enjoy your new games!">
+  <title>Game Hub | Checkout Success</title>
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 
@@ -27,8 +27,8 @@
           </button>
           </form>
       <div class="purchase">
-        <a href="checkout-cart.html" title="cart"><img src="icons/cart-dustysky.png" alt="Shopping cart icon in inactive state">
-          <span>Cart</span></a>
+        <a href="checkout-cart.html" title="cart"><img src="icons/cart-golden.png" alt="Shopping cart icon in active state">
+          <span class="current">Cart</span></a>
       </div>
     </section>
     <label for="hamburger-menu"><img src="icons\hamburger-golden.png" class="hamburger-menu--checkbox" alt="Menu icon for mobile devices"></label>
@@ -37,65 +37,94 @@
           <ul>
             <li><a href="index.html" title="home"><img src="icons/home-dustysky.png" alt="Homepage icon in inactive state">
               <p>Home</p></a></li>
-            <li><a href="games.html" title="products"><img src="icons/games-golden.png" href="" alt="Product list icon in active state">
-              <p class="current">Games</p></a></li>
+            <li><a href="games.html" title="products"><img src="icons/games-dustysky.png" href="" alt="Product list icon in inactive state">
+              <p>Games</p></a></li>
             <li><a href="sell.html" title="sell used games"><img src="icons/discount-dustysky.png" href="" alt="Sell used games icon in inactive state">
               <p>Sell</p></a></li>
             <li><a href="404.html" title="favourites"><img src="icons/heart-dustysky.png" alt="Favourite icon in inactive state">
               <p>Favourites</p></a></li>
-            <li><a href="account-profile.html" title="account"><img src="icons/account-dustysky.png" alt="Account icon in inactive state">
+            <li><a href="account-profile.html" title="account"><img src="icons/account-dustysky.png"  alt="Account icon in inactive state">
               <p>Account</p></a></li>
           </ul>
         </nav>
     </header>
   <main>
-    <h1>Boyfriend Dungeon</h1>
-    <section class="info-table">
+    <h1>Thank you for your purchase!</h1>
+    <section class="checkout-table">
+      <p class="order-info">Your order will shipped as soon as possible. You can review the order details, billing details and shipment details in the overview below. A receipt will also be sent to your e-mail address.</p>
       <table>
         <tr>
-          <th>Cover</th>
-          <th colspan="2">Info</th>
-          <th>Price</th>
+          <th class="border-top">Product</th>
+          <th class="border-top">Amount</th>
+          <th class="border-top border-right">Price</th>
+          <th colspan="2" class="border-top">Billing Information</th>
         </tr>
-        <tr class="border-top">
-          <td rowspan="4">
-            <img src="products/BD.jpg" alt="Boyfriend Dungeon Cover" class="cover--big">
+        <tr>
+          <td>
+            <p>Dragon Age: Origins</p>
           </td>
-          <td colspan="3">
+          <td>
+            <p>1</p>
+          </td>
+          <td class="border-right">
+            <p>199,-</p>
+          </td>
+          <td class="table-right">
+            <p>Name:</p>
+          </td>
+          <td class="table-left">
+            <p>Jane Doe</p>
           </td>
         </tr>
         <tr>
           <td>
-            <p class="review"><img src="icons/star-empty.png" alt="Empty star icon">
-              <img src="icons/star-empty.png" alt="Empty star icon">
-            <img src="icons/star-empty.png" alt="Empty star icon">
-            <img src="icons/star-empty.png" alt="Empty star icon">
-            <img src="icons/star-empty.png" alt="Empty star icon"></p>
+            <p>Shipping</p>
           </td>
-          <td>
-            <p>Type: Download for PC</p>
+          <td></td>
+          <td class="border-right">
+            <p>49,-</p>
           </td>
-          <td rowspan="2">
-            <p class="pricetag">TBA</p>
+          <td class="table-right">
+            <p>Address:</p>
+          </td>
+          <td class="table-left">
+            <p>42 Lol Street,<br>
+              1337 Paper Town<br>
+              Fantasia
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <th>Total</th>
+          <th class="border-right">248,-</th>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <th colspan="3" class="border-top border-right">Method of Payment</th>
+          <th colspan="2" class="border-top">Shipping Information</th>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="2"  class="border-right">
+            <img src="Icons/payment-visa.png" alt="Visa Icon" class="pay-icon" />
+            <p>Visa Credit or Debit Card</p>
+            <p class="italic">************ 1337</p>
+          </td>
+          <td class="table-right">
+            <p>Name:</p>
+          </td>
+          <td class="table-left">
+            <p>Jane Doe</p>
           </td>
         </tr>
         <tr>
           <td>
-            <p>Rated: To Be Announced</p>
+            <p class="table-right">Address:</p>
           </td>
-          <td>
-            <p>Available: Unlimited</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Item number: 000006</p>
-          </td>
-          <td>
-            <p>Product number: 000006</p>
-          </td>
-          <td>
-            <button class="cta inactive">TBA</button>
+          <td class="table-left">
+            <p>42 Lol Street,<br>
+            1337 Paper Town<br>
+          Fantasia</p>
           </td>
         </tr>
       </table>

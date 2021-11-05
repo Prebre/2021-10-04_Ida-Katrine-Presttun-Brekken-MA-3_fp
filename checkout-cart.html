@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Enjoy your new games!">
-  <title>Game Hub | Checkout Success</title>
+  <meta name="description" content="Make sure all the information is correct.">
+  <title>Game Hub | Your Cart</title>
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 
@@ -27,29 +27,79 @@
           </button>
           </form>
       <div class="purchase">
-        <a href="checkout--confirm.html" title="cart"><img src="icons/cart-golden.png" alt="Shopping cart icon in active state">
+        <a href="checkout-cart.html" title="cart"><img src="icons/cart-golden.png" alt="Shopping cart icon in active state">
           <span class="current">Cart</span></a>
       </div>
     </section>
-    <label for="hamburger-menu"><img src="icons\hamburger-golden.png" class="hamburger-menu--checkbox" alt="Menu icon for mobile devices"></label>
+    <label for="hamburger-menu"><img src="icons/hamburger-golden.png" class="hamburger-menu--checkbox" alt="Menu icon for mobile devices"></label>
     <input type="checkbox" id="hamburger-menu">
         <nav>
           <ul>
             <li><a href="index.html" title="home"><img src="icons/home-dustysky.png" alt="Homepage icon in inactive state">
               <p>Home</p></a></li>
-            <li><a href="games.html" title="products"><img src="icons/games-dustysky.png" href="" alt="Product list icon in inactive state">
+            <li><a href="games.html"" title="products"><img src="icons/games-dustysky.png" href="" alt="Product list icon in inactive state">
               <p>Games</p></a></li>
             <li><a href="sell.html" title="sell used games"><img src="icons/discount-dustysky.png" href="" alt="Sell used games icon in inactive state">
               <p>Sell</p></a></li>
             <li><a href="404.html" title="favourites"><img src="icons/heart-dustysky.png" alt="Favourite icon in inactive state">
               <p>Favourites</p></a></li>
-            <li><a href="account--profile.html" title="account"><img src="icons/account-dustysky.png"  alt="Account icon in inactive state">
+            <li><a href="account-profile.html" title="account"><img src="icons/account-dustysky.png"  alt="Account icon in inactive state">
               <p>Account</p></a></li>
           </ul>
         </nav>
     </header>
   <main>
-    <h1>Thank you for your purchase!</h1>
+    <h1>Shopping Cart</h1>
+    <section class="checkout-table">
+      <table>
+        <tr class="border-top">
+          <th>&nbsp;</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Amount</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr class="border-top">
+          <td class="table-space">
+            <img src="Products/DAO.jpg" title="Dragon Age: Origins Cover" class="cover--smallest">
+          </td>
+          <td>
+            <p>Dragon Age: Origins</p>
+          </td>
+          <td>
+            <p>199,-</p>
+          </td>
+          <td>
+            <p>1</p>
+          </td>
+          <td>
+            <p>199,-</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <p>Shipping</p>
+          </td>
+          <td colspan="2">&nbsp;</td>
+          <td>
+            <p>49,-</p>
+          </td>
+        </tr>
+        <tr class="border-top">
+          <td colspan="3">&nbsp;</td>
+          <th>
+            Total
+          </th>
+          <th>248,-</th>
+        </tr>
+        <tr class="border-top">
+          <td colspan="5" class="table-space">
+            <a href="index.html" title="home">Cancel</a><a href="checkout-information.html" title="Checkout Information page" class="cta">Next</a>
+          </td>
+        </tr>
+      </table>
+    </section>
   </main>
 </body>
 <footer>
