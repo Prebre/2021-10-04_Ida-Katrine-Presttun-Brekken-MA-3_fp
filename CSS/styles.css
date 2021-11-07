@@ -386,7 +386,8 @@ input[type="textarea"],
 input[type="tel"],
 input[type="number"],
 input[type="password"],
-input[type="date"] {
+input[type="date"],
+input[type="month"] {
   background: var(--dusty-sky);
   color: var(--dusty-night);
   margin: 10px;
@@ -710,7 +711,8 @@ label {
   input[type="tel"],
   input[type="number"],
   input[type="password"],
-  input[type="date"] {
+  input[type="date"],
+  input[type="month"] {
     padding: 3px 8px;
     font-size: 0.7rem;
   }
@@ -942,7 +944,8 @@ label {
   input[type="tel"],
   input[type="number"],
   input[type="password"],
-  input[type="date"] {
+  input[type="date"],
+  input[type="month"] {
     padding: 5px 10px;
     font-size: 0.9rem;
   }
