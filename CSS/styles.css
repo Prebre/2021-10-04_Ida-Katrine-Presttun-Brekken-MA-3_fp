@@ -215,8 +215,29 @@ form.searchbar input[type="text"] {
   width: 15%;
 }
 
+.hamburger-menu--checkbox {
+  position: fixed;
+  width: 35px;
+  z-index: 3;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: flex;
+  flex-direction: row;
+}
+
+footer img,
+.return img {
+  padding-right: 10px;
+}
+
 nav {
   z-index: 1;
+  display: none;
 }
 
 body {
@@ -465,6 +486,11 @@ label {
   width: 25px;
 }
 
+.game-desc {
+  width: 40%;
+  margin: auto;
+}
+
 /******************** CHECKOUT ********************/
 
 .pay-icon {
@@ -508,12 +534,8 @@ label {
 /******************** MOBILE MEDIA ********************/
 
 @media only screen and (max-width: 1100px) {
-  .logo img,
-  .hamburger-menu--checkbox {
-    position: absolute;
-  }
-
   .logo img {
+    position: absolute;
     margin-top: 110px;
     margin-left: 10px;
   }
@@ -771,10 +793,15 @@ label {
     text-align: center;
   }
 
-  #hamburger-menu,
   .hamburger-menu--checkbox {
-    display: none;
+    top: 10px;
+    right: 30px;
   }
+
+  /*footer ul {
+    display: flex;
+    flex-direction: row;
+  }*/
 
   nav,
   .error {
@@ -793,11 +820,12 @@ label {
   }
 
   nav {
+    display: none;
     margin: -10px -10px 0px 100px;
     padding: 30px;
     top: 60px;
     height: 90px;
-    width: 65%;
+    width: 50%;
     border-radius: 100px 0px 0px 100px;
   }
 
@@ -808,9 +836,14 @@ label {
     list-style-type: none;
   }
 
-  li {
+  nav li {
     flex: 1rem;
-    margin: -15px 80px;
+    margin: -15px 20%;
+  }
+
+  footer li {
+    flex: 1rem;
+    margin: -15px 10%;
   }
 
   header a,
@@ -824,7 +857,7 @@ label {
   }
 
   main {
-    padding: 200px 0% 1px 0%;
+    padding: 100px 0% 1px 0%;
   }
 
   .info {
