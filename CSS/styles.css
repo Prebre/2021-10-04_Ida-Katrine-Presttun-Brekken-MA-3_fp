@@ -541,7 +541,7 @@ label {
   }
 
   main {
-    padding: 160px 50px 0 160px;
+    padding: 160px 0px 0 0px;
   }
 
   header {
@@ -879,7 +879,7 @@ label {
   }
 
   main {
-    padding: 100px 100px 1px 150px;
+    padding: 100px 0px 1px 0px;
   }
 
   .info {
