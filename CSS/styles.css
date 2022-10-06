@@ -66,7 +66,7 @@ footer {
 
 .topbar img,
 form.searchbar input[type="text"] {
-  height: 35px;
+  height: 25px;
 }
 
 .topbar,
@@ -149,8 +149,9 @@ header {
 }
 
 .topbar {
-  background: var(--dusty-night);
+  background: #313b7a;
   justify-content: space-around;
+  height: 45px;
 }
 
 .mode-switch-wrapper input {
@@ -208,13 +209,6 @@ form.searchbar input[type="text"] {
   align-content: center;
 }
 
-.logo img {
-  width: 25%;
-}
-.shrink img {
-  width: 15%;
-}
-
 .hamburger-menu--checkbox {
   position: fixed;
   width: 35px;
@@ -250,10 +244,6 @@ body {
 
 main {
   margin-bottom: 70px;
-}
-
-.current {
-  border-top: 3px dashed #d48911;
 }
 
 .cta {
@@ -546,12 +536,12 @@ label {
   }
 
   nav {
-    width: 150px;
+    width: 100px;
     display: none;
   }
 
   main {
-    padding: 160px 0% 0 0%;
+    padding: 160px 50px 0 160px;
   }
 
   header {
@@ -560,6 +550,14 @@ label {
     margin: -10px;
     height: 150px;
     width: 100%;
+  }
+
+  .logo img {
+   width: 200px;
+  }
+
+  .shrink img {
+    width: 150px;
   }
 
   .topbar {
@@ -608,7 +606,7 @@ label {
   }
 
   nav li {
-    margin: 5px 0px;
+    margin: 5px 0px 5px -25px;
   }
 
   nav img {
@@ -617,8 +615,13 @@ label {
   }
 
   nav p {
-    margin: 5px 0px 10px 0px;
+    margin: -20px 0px 25px 0px;
     padding-top: 5px;
+    border-bottom: 1px solid #bac5cf;
+  }
+
+  .current {
+    border-bottom: 3px dotted #d48911;
   }
 
   nav img,
@@ -776,7 +779,7 @@ label {
 @media only screen and (min-width: 1100px) {
   .logo img {
     position: fixed;
-    margin-top: 70px;
+    margin-top: 45px;
   }
 
   .topbar {
@@ -793,6 +796,14 @@ label {
   h1,
   h2 {
     text-align: center;
+  }
+
+  .logo img {
+    width: 300px;
+  }
+
+  .shrink img {
+    width: 200px;
   }
 
   .hamburger-menu--checkbox {
@@ -813,7 +824,7 @@ label {
   nav img,
   footer img,
   .return img {
-    width: 35px;
+    width: 30px;
   }
 
   footer img,
@@ -823,11 +834,11 @@ label {
 
   nav {
     display: none;
-    margin: -10px -10px 0px 100px;
+    margin: -20px 0px -20px 10px;
     padding: 30px;
     top: 60px;
-    height: 90px;
-    width: 50%;
+    height: 50px;
+    width: 450px;
     border-radius: 100px 0px 0px 100px;
   }
 
@@ -840,7 +851,16 @@ label {
 
   nav li {
     flex: 1rem;
-    margin: -15px 20%;
+    margin: -20px 15px;
+  }
+
+  nav p {
+    margin-top: -3px;
+  }
+
+  .current {
+    border-top: 3px dotted #d48911;
+    margin-top: 0px;
   }
 
   footer li {
@@ -859,7 +879,7 @@ label {
   }
 
   main {
-    padding: 100px 0% 1px 0%;
+    padding: 100px 100px 1px 150px;
   }
 
   .info {
