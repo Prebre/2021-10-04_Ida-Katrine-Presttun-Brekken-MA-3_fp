@@ -64,7 +64,7 @@ form.onsubmit = function validateForm(event) {
     document.getElementById('validationmessage').innerHTML += '<p>Form sent!</p>'
 }
 
-/* Cart Functions */
+/* Game Info */
 
 $(document).ready(function() {
     var gameItem = [{
@@ -119,7 +119,78 @@ $(document).ready(function() {
 
 });
 
-funtion showGameList(game) {
+/* Cart Functions */
+
+function addToCart(element) {
+    var gameProduct =$(element).closest('div.game-item');
+
+    var price = $(gameProduct).find('.price span').text();
+    var gameName = $(gameProduct).find('.gameName').text();
+    var amount = $(gameProduct).find('.game-amount').text();
+
+    var cartItem = {
+        gameName: gameName,
+        price: price,
+        amount: amount
+    };
+    var cartItemJSON = JSON.stringify(cartItem);
+
+    var cartArray = new Array();
+    if (sessionStorage.getItem('shopping-cart')) {
+        cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+    }
+    vartArray.push(cartItemJSON);
+
+    var cartJSON = JSON.stringify(cartArray);
+    sessionStorage.setItem('shopping-cart', cartJSON);
+    showCartTable();
+}
+
+function emptyCart() {
+    if (sessionStorage.getItem('shopping-cart')) {
+        sessionStorage.removeItem('shopping-cart');
+        showCartTable();
+    }
+}
+
+function showCartTable() {
+    var cartRowHTML = "";
+    var gameCount= 0;
+    var grandTotal = 0;
+
+    var price = 0;
+    var amount = 0;
+    var subTotal = 0;
+
+    if (sessionStorage.getItem('shopping-cart')) {
+        var shoppingCart = JSON.parse(sessionStorage.getItem('shopping-cart'));
+        gameCount = shoppingCart.length;
+
+        shoppingCart.forEach(function(game) {
+            var cartItem = JSON.parse(game);
+            price = parseFloat(cartItem.price);
+            amount = parseInt(cartItem.amount);
+            total = price * amount
+
+            carRowHTML += "<tr>" +
+            "<td>" + cartItem.gameName + "</td>" +
+            "<td>$" + price.toFixed(2) + "</td>" +
+            "<td>$" + amount + "</td>" +
+            "<td>$" + subTotal.toFixed(2) + "</td>" +
+            "</tr>";
+
+            grandTotal += subTotal;
+        });
+    }
+
+    $('$cartTableBody').html(cartRowHTML);
+    $('#gameCount').text(gameCount);
+    $('#totalAmount').text("$" + grandTotal.toFixed(2));
+}
+
+/* Game List */
+
+function showGameList(game) {
     var gameHTML = "";
     game.forEach(function(game) {
         gameHTML += '<div class="game-item">' +
@@ -127,7 +198,7 @@ funtion showGameList(game) {
                         '<a href="' + game.gameURL + 'class="game-title" title="' + game.gameName + '">' + game.gameName + '</a>' +
                         '<p class="review">' + game.reviews + '</p>' +
                         '<p>' + game.type + '</p>' +
-                        '<p class="pricetag">' + game.price + '</p>' +
+                        '<p class="pricetag">$<span>' + game.price + '</span></p>' +
                         '<p>' + game.rated + '</p>' +
                         '<p>' + game.availabe + '</p>' +
                         '<p>' + game.itemNumber + '</p>' +
