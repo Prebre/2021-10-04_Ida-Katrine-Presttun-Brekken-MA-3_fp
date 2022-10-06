@@ -266,6 +266,10 @@ main {
   color: var(--white);
 }
 
+.crumbs {
+  padding-left: 30px;
+}
+
 .info-table table,
 .checkout-table table {
   text-align: center;
@@ -273,8 +277,9 @@ main {
 
 .info-table table,
 .checkout-table table {
-  width: 100%;
+  width: 90%;
   margin-bottom: 50px;
+  margin-left: 100px;
 }
 
 .info-table th {
@@ -385,6 +390,8 @@ input[type="month"] {
   font-style: italic;
   border: 1px solid var(--darkmode);
   border-radius: 15px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 label {
@@ -649,6 +656,12 @@ label {
     padding: 2% 15%;
   }
 
+  
+
+.crumbs {
+  padding-top: 20px;
+}
+
   .table-left,
   .table-right {
     font-size: 1rem;
@@ -722,7 +735,7 @@ label {
 
   input[type="textarea"] {
     width: 250px;
-    height: 200px;
+    min-height: 80px;
   }
 
   .game-title {
@@ -900,6 +913,10 @@ label {
     margin: 0 35% 50px;
   }
 
+.crumbs {
+  padding-top: 50px;
+}
+
   .info-table,
   .checkout-table {
     margin: 50px 5%;
@@ -972,7 +989,7 @@ label {
 
   input[type="textarea"] {
     width: 450px;
-    height: 250px;
+    min-height: 80px;
   }
 
   .game-title {

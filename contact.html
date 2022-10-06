@@ -62,38 +62,22 @@
   <main>
     <h1>Contact form</h1>
     <section class="page-form">
-      <table>
-        <form>
-          <tr>
-            <td class="input-info">
-              <label for="contact-name">Name*</label><br>
-              <input type="text" id="contact-name" name="contact-name">
-            </td>
-          </tr>
-          <tr>
-            <td class="input-info">
-              <label for="contact-mail">E-mail*</label><br>
-              <input type="email" id="contact-mail" name="contact-mail">
-            </td>
-          </tr>
-          <tr>
-            <td class="input-info">
-              <label for="contact-subject">Subject*</label><br>
-              <input type="text" id="contact-subject" name="contact-subject">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="contact-message">Message*</label><br>
-              <input type="textarea" id="contact-message" name="contact-message">
-            </td>
-          </tr>
-          <tr>
-            <td class="form-centered">
-              <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
-            </td>
-          </tr>
+      
+    <div id="validationmessage">
+    </div>
+    <div class="container">
+        <form id="contactForm" name="contactForm" onsubmit="validateForm();">
+            <label for="contact-name">Name: *</label><br>
+            <input type="text" id="contact-name" name="contact-name" required><br>
+            <label for="contact-mail">Email: *</label><br>
+            <input type="email" id="contact-mail" name="contact-mail" required><br>
+            <label for="contact-subject">Subject: *</label><br>
+            <input type="text" id="contact-subject" name="contact-subject" minlength="10" required><br>
+            <label for="contact-message">Message: *</label><br>
+            <input type="textarea" id="contact-message" name="contact-message" minlength="25" required><br>
+            <a href="index.html" title="home">Cancel</a><input type="submit" id="submit" value="Submit" class="cta">
         </form>
+    </div>
       </section>
   </main>
   <script src="JS/script.js"></script>
