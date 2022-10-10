@@ -421,6 +421,11 @@ label {
   margin-top: 0px;
 }
 
+.index-nav {
+  text-align: center;
+  font-size: 2em;
+}
+
 /******************** ACCOUNT PROFILE ********************/
 
 .profile-info {
