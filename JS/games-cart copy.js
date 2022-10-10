@@ -53,6 +53,7 @@ for (let i = 0; i < product.length; i++) {
     '<p>' + product[i].type + '</p>' +
     '<p class="review">' + product[i].reviews + '</p>' +
     '<p>' + product[i].rated + '</p>' +
+    '<p>' + product[i].availabe + '</p>' +
     '<div class="cart-add">' +
         '<input type="text" class="game-amount" name="amount" value="1"/>'+
         '<input type="submit" value="Add to Cart" class="cta add-to-cart" onClick="addToCart(this)" />'+
