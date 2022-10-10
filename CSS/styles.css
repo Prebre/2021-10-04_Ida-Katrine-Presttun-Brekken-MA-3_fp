@@ -423,7 +423,6 @@ label {
 
 .index-nav {
   text-align: center;
-  font-size: 2em;
 }
 
 /******************** ACCOUNT PROFILE ********************/
@@ -681,6 +680,10 @@ text-align: center;
     text-align: center;
   }
 
+.index-nav {
+  font-size: 1.5em;
+}
+
   .info {
     padding: 2% 15%;
   }
@@ -924,6 +927,10 @@ text-align: center;
 
   main {
     padding: 100px 0px 1px 0px;
+  }
+
+  .index-nav {
+    font-size: 2em;
   }
 
   .info {
