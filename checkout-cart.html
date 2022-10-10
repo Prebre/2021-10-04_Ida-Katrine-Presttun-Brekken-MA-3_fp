@@ -61,56 +61,28 @@
     </header>
   <main>
     <h1>Shopping Cart</h1>
-    <section class="checkout-table">
-      <table>
-        <tr class="border-top">
-          <th>&nbsp;</th>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Amount</th>
-          <th>Subtotal</th>
-        </tr>
-        <tr class="border-top">
-          <td class="table-space">
-            <img src="Products/DAO.jpg" title="Dragon Age: Origins Cover" class="cover--smallest">
-          </td>
-          <td>
-            <p>Dragon Age: Origins</p>
-          </td>
-          <td>
-            <p>199,-</p>
-          </td>
-          <td>
-            <p>1</p>
-          </td>
-          <td>
-            <p>199,-</p>
-          </td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>
-            <p>Shipping</p>
-          </td>
-          <td colspan="2">&nbsp;</td>
-          <td>
-            <p>49,-</p>
-          </td>
-        </tr>
-        <tr class="border-top">
-          <td colspan="3">&nbsp;</td>
-          <th>
-            Total
-          </th>
-          <th>248,-</th>
-        </tr>
-        <tr class="border-top">
-          <td colspan="5" class="table-space">
-            <a href="index.html" title="home">Cancel</a><a href="checkout-information.html" title="Checkout Information page" class="cta">Next</a>
-          </td>
-        </tr>
-      </table>
-    </section>
+    <div id="shopping-cart">
+			<a onClick="emptyCart()">Empty Cart</a>
+			<table class="checkout-table" cellpadding="15" cellspacing="1">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th width="10%">Price</th>
+						<th width="5%">Amount</th>
+						<th width="15%">Sub Total</th>
+					</tr>
+				</thead>
+				<tbody id="cartTableBody">
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Total:</td>
+						<td id="gameCount" colspan="2"></td>
+						<td id="grandTotal"></td>
+					</tr>
+				</tfoot>
+			</table>
+    </div>
   </main>
   <script src="JS/script.js"></script>
 </body>

@@ -458,18 +458,42 @@ label {
 
 /******************** PRODUCT LIST ********************/
 
+#game-container {
+text-align: center;
+}
+
+.game-product {
+  margin: 15px;
+  padding: 15px;
+  background-color: var(--dusty-night);
+  border: 15px solid var(--dusty-night);
+  display: inline-grid;
+  column-gap: 30px;
+}
+
+.grid-2 {
+  grid-column-start: span 2;
+}
+
+.game-title {
+  font-size: 1.7rem;
+}
+
 .cover--small {
-  margin: 30px auto 60px auto;
+  margin: 30px auto 10px auto;
 }
 
 .pricetag {
   color: var(--golden);
   font-family: var(--captain);
+  margin: -5px 0px;
 }
 
 .review {
   position: relative;
   background: var(--dusty-sky);
+  color: var(--dusty-night);
+  text-align: center;
   margin: auto;
   z-index: -1;
 }
@@ -506,10 +530,6 @@ label {
 
 /******************** ERROR PAGE 404 ********************/
 
-.logo--big img {
-  width: 40%;
-  margin: 0% 30%;
-}
 .error {
   padding: 20px 30%;
   text-align: center;
@@ -565,6 +585,10 @@ label {
 
   .shrink img {
     width: 150px;
+  }
+
+  .logo--big img {
+    width: 300px;
   }
 
   .topbar {
@@ -689,11 +713,18 @@ label {
     height: 5rem;
   }
 
+  .game-product {
+    width: 300px;
+    height: 550px;
+    }
+
   .review {
     border-radius: 20px;
     width: 80px;
     padding: 3px 2px 2px 2px;
     margin: auto;
+    text-transform: uppercase;
+    font-family: var(--captain);
   }
 
   .review img {
@@ -738,10 +769,6 @@ label {
     min-height: 80px;
   }
 
-  .game-title {
-    font-size: 1.6rem;
-  }
-
   .pricetag {
     font-size: 1.8rem;
   }
@@ -752,7 +779,7 @@ label {
   }
 
   .error {
-    margin-top: 7%;
+    margin-top: 3%;
   }
 
   .error h1,
@@ -819,15 +846,14 @@ label {
     width: 200px;
   }
 
+  .logo--big img {
+    width: 400px;
+  }
+
   .hamburger-menu--checkbox {
     top: 10px;
     right: 30px;
   }
-
-  /*footer ul {
-    display: flex;
-    flex-direction: row;
-  }*/
 
   nav,
   .error {
@@ -913,9 +939,9 @@ label {
     margin: 0 35% 50px;
   }
 
-.crumbs {
-  padding-top: 50px;
-}
+  .crumbs {
+    padding-top: 50px;
+  }
 
   .info-table,
   .checkout-table {
@@ -940,6 +966,11 @@ label {
     font-size: 2rem;
   }
 
+  .game-product {
+  width: 300px;
+  height: 700px;
+  }
+
   .cover--big {
     height: 25rem;
   }
@@ -957,6 +988,8 @@ label {
     width: 120px;
     padding: 8px 4px 4px 4px;
     margin: auto;
+    text-transform: uppercase;
+    font-family: var(--captain);
   }
 
   .review img {
@@ -992,10 +1025,6 @@ label {
     min-height: 80px;
   }
 
-  .game-title {
-    font-size: 2.5rem;
-  }
-
   .pricetag {
     font-size: 2.5rem;
   }
@@ -1006,7 +1035,7 @@ label {
   }
 
   .error {
-    margin-top: 15%;
+    margin-top: 10%;
     border-radius: 500px;
   }
 
