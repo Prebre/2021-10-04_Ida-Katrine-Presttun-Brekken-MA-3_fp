@@ -1,22 +1,24 @@
 /* Form Validation */
 
-const form = document.querySelector('#contactForm');
-const fullname = document.querySelector('#contact-name');
-const subject = document.querySelector('#contact-subject');
-const email = document.querySelector('#contact-mail');
-const address = document.querySelector('#contact-message');
+/*** Contact Form ***/
+
+const conForm = document.querySelector('#contactForm');
+const conName = document.querySelector('#contact-name');
+const conSubject = document.querySelector('#contact-subject');
+const conMail = document.querySelector('#contact-mail');
+const conMessage = document.querySelector('#contact-message');
     
-fullname.addEventListener('invalid', function (event) {
+conName.addEventListener('invalid', function (event) {
         if (event.target.validity.valueMissing) {
                 event.target.setCustomValidity('Please fill in your name');
         }
 })
     
-fullname.addEventListener('change', function (event) {
+conName.addEventListener('change', function (event) {
         event.target.setCustomValidity('');
 })
     
-subject.addEventListener('invalid', function (event) {
+conSubject.addEventListener('invalid', function (event) {
         if (event.target.validity.valueMissing) {
                 event.target.setCustomValidity('Please add a subject');
         }
@@ -26,11 +28,11 @@ subject.addEventListener('invalid', function (event) {
         }
 })
     
-subject.addEventListener('change', function (event) {
+conSubject.addEventListener('change', function (event) {
         event.target.setCustomValidity('');
 })
     
-email.addEventListener('invalid', function (event) {
+conMail.addEventListener('invalid', function (event) {
         if (event.target.validity.valueMissing) {
                 event.target.setCustomValidity('Please fill in your email');
         }
@@ -40,11 +42,11 @@ email.addEventListener('invalid', function (event) {
         }
 })
     
-email.addEventListener('change', function (event) {
+conMail.addEventListener('change', function (event) {
         event.target.setCustomValidity('');
 })
     
-address.addEventListener('invalid', function (event) {
+conMessage.addEventListener('invalid', function (event) {
         if (event.target.validity.valueMissing) {
                 event.target.setCustomValidity('Please add your message');
         }
@@ -54,11 +56,74 @@ address.addEventListener('invalid', function (event) {
         }
 })
     
-address.addEventListener('change', function (event) {
+conMessage.addEventListener('change', function (event) {
         event.target.setCustomValidity('');
 })
     
-form.onsubmit = function validateForm(event) {
+conForm.onsubmit = function validateForm(event) {
+        event.preventDefault();
+
+    document.getElementById('validationmessage').innerHTML += '<p>Form sent!</p>'
+}
+
+
+/*** Seller Form ***/
+
+const sellForm = document.querySelector('#sellerForm');
+const sellName = document.querySelector('#seller-name');
+const sellMail = document.querySelector('#seller-mail');
+const sellGame = document.querySelector('#seller-game');
+const sellMessage = document.querySelector('#seller-message');
+    
+sellName.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+                event.target.setCustomValidity('Please fill in your name');
+        }
+})
+    
+sellName.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+})
+    
+sellGame.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+                event.target.setCustomValidity('Please add a game title');
+        }
+})
+    
+sellGame.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+})
+    
+sellMail.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+                event.target.setCustomValidity('Please fill in your email');
+        }
+            
+        if (event.target.validity.typeMismatch) {
+                event.target.setCustomValidity('Please fill in a valid email');
+        }
+})
+    
+sellMail.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+})
+    
+sellMessage.addEventListener('invalid', function (event) {
+        if (event.target.validity.valueMissing) {
+                event.target.setCustomValidity('Please add game state description');
+        }
+            
+        if (event.target.validity.tooShort) {
+                event.target.setCustomValidity('Must contain at least 25 characters');
+        }
+})
+    
+sellMessage.addEventListener('change', function (event) {
+        event.target.setCustomValidity('');
+})
+    
+sellForm.onsubmit = function validateForm(event) {
         event.preventDefault();
 
     document.getElementById('validationmessage').innerHTML += '<p>Form sent!</p>'

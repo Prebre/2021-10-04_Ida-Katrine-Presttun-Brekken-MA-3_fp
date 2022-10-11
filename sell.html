@@ -60,39 +60,24 @@
         </nav>
     </header>
   <main>
+    <p class="crumbs"><a href="index.html" title="Home">Home page</a> - Seller form</p>
     <h1>Sell game</h1>
     <section class="page-form">
-      <table>
-        <form>
-          <tr>
-            <td class="input-info">
-              <label for="seller-name">Name*</label><br>
-              <input type="text" id="seller-name" name="seller-name">
-            </td>
-          </tr>
-          <tr>
-            <td class="input-info">
-              <label for="seller-mail">E-mail*</label><br>
-              <input type="email" id="seller-mail" name="seller-mail">
-            </td>
-          </tr>
-          <tr>
-            <td class="input-info">
-              <label for="seller-game-title">Game Title*</label><br>
-            <input type="text" id="seller-game-title" name="seller-game-title">
-            </td>
-          </tr>
-            <td>
-              <label for="seller-description center">Description*</label><br>
-              <input type="textarea" id="seller-description" name="seller-description">
-          </tr>
-          <tr>
-            <td class="form-centered">
-              <a href="index.html" title="home">Cancel</a><input type="submit" value="Submit" class="cta">
-            </td>
-          </tr>
-        </form>
-      </table>
+      <div id="validationmessage">
+      </div>
+      <div class="container">
+          <form id="sellerForm" name="sellerForm" onsubmit="validateForm();">
+              <label for="seller-name">Name: *</label><br>
+              <input type="text" id="seller-name" name="seller-name" required><br>
+              <label for="seller-mail">Email: *</label><br>
+              <input type="email" id="seller-mail" name="seller-mail" required><br>
+              <label for="seller-game">Game Title: *</label><br>
+              <input type="text" id="seller-game" name="seller-game" required><br>
+              <label for="seller-message">Description of game state: *</label><br>
+              <input type="textarea" id="seller-message" name="seller-message" minlength="25" required><br>
+              <a href="index.html" title="home">Cancel</a><input type="submit" id="submit" value="Submit" class="cta">
+          </form>
+      </div>
     </section>
   </main>
   <script src="JS/form.js"></script>
@@ -106,7 +91,7 @@
       <span>FAQ</span></a>
     </li>
     <li><a href="contact.html" title="contact"><img src="icons/mail-dustysky.png" alt="Contact icon in inactive state">
-      <span>Contact</span>
+      <span>contact</span>
       </a>
     </li>
   </ul>
