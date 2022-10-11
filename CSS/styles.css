@@ -279,7 +279,7 @@ main {
 .checkout-table table {
   width: 90%;
   margin-bottom: 50px;
-  margin-left: 100px;
+  margin-left: 5%;
 }
 
 .info-table th {
@@ -348,7 +348,6 @@ a :hover {
 /******************** FORMS ********************/
 .account-form {
   margin: 0 25% 50px;
-  text-align: right;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -361,7 +360,7 @@ a :hover {
   margin-bottom: 20px;
 }
 
-.form-centered {
+.centered {
   text-align: center;
   padding-top: 20px;
 }
@@ -427,14 +426,70 @@ label {
 
 /******************** ACCOUNT PROFILE ********************/
 
+.container {
+  display: flex;
+}
 .profile-info {
-  margin: 0 30%;
+  margin: 0 20%;
+}
+
+.profile-card {
+  background-color: var(--dusty-night);
+  border: 15px solid var(--dusty-night);
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: start;
   align-content: space-around;
+  gap: 30px;
+}
+
+.flex-1 {
+  order: 1;
+}
+
+.flex-2 {
+  order: 2;
+}
+
+.flex-3 {
+  order: 3;
+}
+
+.flex-4 {
+  order: 4;
+}
+
+.flex-5 {
+  order: 5;
+}
+
+.flex-1, .flex-2, .flex-3, .flex-4, .flex-5 {
+  flex-basis: min-content;
+}
+
+.info-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: space-around;
+  gap: 30px;
+}
+
+.info-card {
+  background-color: var(--dusty-night);
+  border: 15px solid var(--dusty-night);
+  border-radius: 15px;
+}
+
+.info-header {
+  font-family: var(--captain);
+  color: var(--golden);
+  font-size: 1.7rem;
 }
 
 .table-right {
@@ -471,6 +526,7 @@ text-align: center;
   padding: 15px;
   background-color: var(--dusty-night);
   border: 15px solid var(--dusty-night);
+  border-radius: 15px;
   display: inline-grid;
   column-gap: 30px;
 }
@@ -518,6 +574,19 @@ text-align: center;
 }
 
 /******************** CHECKOUT ********************/
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: space-around;
+}
+
+.flex-child {
+  flex-basis: 300px;
+}
 
 .pay-icon {
   width: 25px;

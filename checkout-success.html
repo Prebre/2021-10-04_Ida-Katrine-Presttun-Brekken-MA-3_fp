@@ -64,82 +64,100 @@
     <h1>Thank you for your purchase!</h1>
     <section class="checkout-table">
       <p class="order-info">We have received your order. If you ordered a physical product, we will ship it as soon as possible, and will send you an e-mail containing shipping information. If you ordered a downloadable product, you will recieve an e-mail containing download information shortly. You can review the order details, billing details and shipment details in the overview below. A receipt will also be sent to your e-mail address.</p>
-      <table>
-        <tr>
-          <th class="border-top">Product</th>
-          <th class="border-top">Amount</th>
-          <th class="border-top border-right">Price</th>
-          <th colspan="2" class="border-top">Billing Information</th>
-        </tr>
-        <tr>
-          <td>
-            <p>Dragon Age: Origins</p>
-          </td>
-          <td>
-            <p>1</p>
-          </td>
-          <td class="border-right">
-            <p>199,-</p>
-          </td>
-          <td class="table-right">
-            <p>Name:</p>
-          </td>
-          <td class="table-left">
-            <p>Jane Doe</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p>Shipping</p>
-          </td>
-          <td></td>
-          <td class="border-right">
-            <p>49,-</p>
-          </td>
-          <td class="table-right">
-            <p>Address:</p>
-          </td>
-          <td class="table-left">
-            <p>42 Lol Street,<br>
+      <div class="flex">
+        <table class="flex-child">
+          <tr>
+            <th class="border-top">Product</th>
+            <th class="border-top">Amount</th>
+            <th class="border-top">Price</th>
+          </tr>
+          <tr>
+            <td>
+              <p>Dragon Age: Origins</p>
+            </td>
+            <td>
+              <p>1</p>
+            </td>
+            <td>
+              <p>199,-</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Shipping</p>
+            </td>
+            <td></td>
+            <td>
+              <p>49,-</p>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <th>Total</th>
+            <th>248,-</th>
+            <td colspan="2"></td>
+          </tr>
+        </table>
+        <table class="flex-child">
+          <tr>
+            <th class="border-top">Method of Payment</th>
+          </tr>
+          <tr>
+            <td>
+              <img src="Icons/payment-visa.png" alt="Visa Icon" class="pay-icon" />
+              <p>Visa Credit or Debit Card</p>
+              <p class="italic">************ 1337</p>
+            </td>
+          </tr>       
+        </table>
+        <table class="flex-child">
+          <tr>
+            <th colspan="2" class="border-top">Billing Information</th>
+          </tr>
+          <tr>
+            <td class="table-right">
+              <p>Name:</p>
+            </td>
+            <td class="table-left">
+              <p>Jane Doe</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-right">
+              <p>Address:</p>
+            </td>
+            <td class="table-left">
+              <p>42 Lol Street,<br>
+                1337 Paper Town<br>
+                Fantasia
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table class="flex-child">
+          <tr>
+            <th colspan="2" class="border-top">Shipping Information</th>
+          </tr>
+          <tr>
+            <td class="table-right">
+              <p>Name:</p>
+            </td>
+            <td class="table-left">
+              <p>Jane Doe</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="table-right">Address:</p>
+            </td>
+            <td class="table-left">
+              <p>42 Lol Street,<br>
               1337 Paper Town<br>
-              Fantasia
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <th>Total</th>
-          <th class="border-right">248,-</th>
-          <td colspan="2"></td>
-        </tr>
-        <tr>
-          <th colspan="3" class="border-top border-right">Method of Payment</th>
-          <th colspan="2" class="border-top">Shipping Information</th>
-        </tr>
-        <tr>
-          <td colspan="3" rowspan="2"  class="border-right">
-            <img src="Icons/payment-visa.png" alt="Visa Icon" class="pay-icon" />
-            <p>Visa Credit or Debit Card</p>
-            <p class="italic">************ 1337</p>
-          </td>
-          <td class="table-right">
-            <p>Name:</p>
-          </td>
-          <td class="table-left">
-            <p>Jane Doe</p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p class="table-right">Address:</p>
-          </td>
-          <td class="table-left">
-            <p>42 Lol Street,<br>
-            1337 Paper Town<br>
-          Fantasia</p>
-          </td>
-        </tr>
-      </table>
+            Fantasia</p>
+            </td>
+          </tr>
+        </table>
+      </div>
     </section>
   </main>
   <script src="games-cart.js"></script>

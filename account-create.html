@@ -63,92 +63,34 @@
     <p class="crumbs"><a href="index.html" title="Home">Home page</a> - Create Account</p>
     <h1>Create account</h1>
     <section class="account-form">
-      <table>
-        <form>
-          <tr>
-            <td>
-              <label for="account-fname">First Name*</label>
-              <input type="text" id="account-fname" name="account-fname" value="Your first name">
-            </td>
-            <td>
-              <label for="account-lname">Last Name*</label>
-              <input type="text" id="account-lname" name="account-lname" value="Your last name">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="account-mail">E-mail*</label>
-              <input type="email" id="account-mail" name="account-mail" value="Your e-mail address">
-            </td>
-            <td>
-              <label for="account-phone">Phone Number</label>
-              <input type="tel" id="account-phone" name="account-phone" value="Your phone number, optional">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="account-birthday">Date of Birth*</label>
-              <input type="date" id="account-birthday" name="account-birthday">
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td colspan="2">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>
-              <label for="account-addr1">Address (Line 1)*</label>
-              <input type="text" id="account-addr1" name="account-addr1" value="Your address">
-            </td>
-            <td>
-              <label for="account-addr2">Address (Line 2)</label>
-              <input type="text" id="account-addr2" name="account-addr2" value="Additional address line, optional">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="account-city">City*</label>
-              <input type="text" id="account-city" name="account-city" value="The city you live in">
-            </td>
-            <td>
-              <label for="account-zip">Zip Code*</label>
-              <input type="number" id="account-zip" name="account-zip" value="Your area code">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="account-country">Country*</label>
-              <input type="text" id="account-country" name="account-country" value="The country you live in">
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td colspan="2">&nbsp;</td>
-          </tr>
-          <tr>
-            <td>
-              <label for="account-pw">Password*</label>
-              <input type="password" id="account-pw" name="account-pw">
-            </td>
-            <td>
-              <label for="account-pw-confirm">Confirm Password*</label>
-              <input type="password" id="account-pw-confirm" name="account-pw-confirm">
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="form-centered">
-              <input type="radio" id="account-terms" name="account-terms">
-              <label for="account-terms">I agree to the <a href="404.html" title="terms and conditions">Terms and Conditions</a></label>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="form-centered">
-              <a href="index.html" title="home">Cancel</a>
-              <input type="submit" value="Submit" class="cta">
-            </td>
-          </tr>
+      <div class="container">
+        <form id="accountForm" name="accountForm" onsubmit="validateForm();">
+            <label for="account-fname">First name: *</label><br>
+                <input type="text" id="account-fname" name="account-fname" required><br>
+            <label for="account-lname">Last name: *</label><br>
+                <input type="text" id="account-lname" name="account-lname" required><br>
+            <label for="account-mail">Email: *</label><br>
+                <input type="email" id="account-mail" name="account-mail" required><br>
+            <label for="account-phone">Phone number:</label><br>
+                <input type="tel" id="account-phone" name="account-phone"><br>
+            <label for="account-birth">Date of birth: *</label><br>
+                <input type="date" id="account-birth" name="account-birth" minlength="25" required><br>
+            <label for="account-address">Street address: *</label><br>
+                <input type="text" id="account-address" name="account-address" minlength="25" required><br>
+            <label for="account-cityzip">City and Zip code: *</label><br>
+                <input type="text" id="account-cityzip" name="account-cityzip" minlength="25" required><br>
+            <label for="account-country">Country: *</label><br>
+                <input type="text" id="account-country" name="account-country" minlength="25" required><br>
+            <label for="account-password">Password: *</label><br>
+                <input type="password" id="account-password" name="account-password" minlength="25" required><br>
+            <label for="account-confirmpassword">Confirm password: *</label><br>
+                <input type="password" id="account-confirmpassword" name="account-confirmpassword" minlength="25" required><br>
+                <input type="radio" id="account-terms" name="account-terms">
+            <label for="account-terms">I agree to the <a href="404.html" title="terms and conditions">Terms and Conditions</a></label><br>
+            <a href="index.html" title="home">Cancel</a>
+                <input type="submit" value="Submit" class="cta">
         </form>
-      </table>
+      </div>
     </section>
   </main>
   <script src="JS/form.js"></script>
