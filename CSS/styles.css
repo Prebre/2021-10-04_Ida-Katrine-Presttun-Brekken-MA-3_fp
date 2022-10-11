@@ -360,6 +360,12 @@ a :hover {
   margin-bottom: 20px;
 }
 
+.page-form {
+  background-color: var(--dusty-night);
+  border: 15px solid var(--dusty-night);
+  border-radius: 15px;
+}
+
 .centered {
   text-align: center;
   padding-top: 20px;

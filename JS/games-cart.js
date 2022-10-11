@@ -54,7 +54,7 @@ for (let i = 0; i < product.length; i++) {
         gameContainer.innerHTML += '<div class="game-product">' +
                 '<a href="games/' + product[i].gameURL + '" class="game-title grid-2" alt="' + product[i].title + '">' + product[i].title + '</a><br>' +
                 '<p class="review grid-2">Rated ' + product[i].reviews + '</p>' +
-                '<img src="products/' + product[i].photo + '" class="cover--small grid-2" alt="' + product[i].title + ' cover art">' +
+                '<a href="games/' + product[i].gameURL + '" class="game-title grid-2" alt="' + product[i].title + '"><img src="products/' + product[i].photo + '" class="cover--small" alt="' + product[i].title + ' cover art"></a><br>' +
                 '<p class="grid-2">' + product[i].type + '</p>' +
                 '<p class="pricetag grid-2">$<span>' + product[i].price + '</span></p>' +
                 '<p class="grid-2">' + product[i].rated + '</p>' +
