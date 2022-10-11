@@ -213,6 +213,7 @@ form.searchbar input[type="text"] {
   position: fixed;
   width: 35px;
   z-index: 3;
+  cursor: pointer;
 }
 
 #hamburger-menu {
@@ -256,6 +257,7 @@ main {
   letter-spacing: 3px;
   margin-left: 20px;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .table-space {
