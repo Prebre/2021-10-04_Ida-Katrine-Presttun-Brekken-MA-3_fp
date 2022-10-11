@@ -2,6 +2,7 @@
 
 let container = document.querySelector("#game-container");
 
+
 let product = [{
     title: "Assassin's Creed: Valhalla",
     price: "599,-",
@@ -60,6 +61,30 @@ for (let i = 0; i < product.length; i++) {
     '</div>'
 '</div>';
 }
+
+
+/* Cart Functions */
+
+function addToCart() {
+    var products = [];
+
+    if(localStorage.getItem('products')) {
+        products = JSON.parse(localStorage.getItem('products'));
+    }
+    products.push({'productID' : productID + 1, image : '<imageLink>'});
+    localStorage.setItem('products', JSON.stringify(products));
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Cart Functions */
 

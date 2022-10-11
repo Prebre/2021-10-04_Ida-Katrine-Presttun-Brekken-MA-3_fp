@@ -70,20 +70,23 @@ for (let i = 0; i < product.length; i++) {
                 '</div>'
         '</div>';
 
-    
-
         function addToCart() {
-                let amount = document.getElementsByName('amount');
-                let subTotal = product[i].price * amount;
+                if(localStorage.getItem('product')) {
+                        product = JSON.parse(localStorage.getItem('product'));
+                }
+                product.push({'productId' : product.id + 1, image : product.gameURL});
+                localStorage.setItem('product', JSON.stringify(product));
+        }
 
-                cartContainer.innerHTML = '<tr>' +
-                '<td><img src="products/' + product[i].photo + '" class=cover--smallest" alt="' + product[i].title + 'cover art"></td>' +
-                '<td>$' + product[i].title + '</td>' +
-                '<td>$' + product[i].price + '</td>' +
-                '<td>$' + amount + '</td>' +
-                '<td>$' + subTotal + '</td>' +
-                '</tr>';
+        function removeFromCart() {
+                let storageProducts = JSON.parse(localStorage.getItem('product'));
+                let product = storageProducts.filter(product => product.productId !== productId);
+                localStorage.setItem('product', JSON.stringify(product));
         }
 };
+
+
+
+
 
 /* Generate Cart Items */
