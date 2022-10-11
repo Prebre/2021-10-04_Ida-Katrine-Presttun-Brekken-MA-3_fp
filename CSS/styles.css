@@ -429,6 +429,7 @@ label {
 .container {
   display: flex;
 }
+
 .profile-info {
   margin: 0 20%;
 }
