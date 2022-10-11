@@ -81,7 +81,7 @@ function addToCart(target) {
     if (sessionStorage.getitem('shopping-cart')) {
         cartArray = JSON.parse(sessionStorage.getitem('shopping-cart'));
     }
-    vartArray.push(cartitemJSON);
+    cartArray.push(cartitemJSON);
 
     var cartJSON = JSON.stringify(cartArray);
     sessionStorage.setitem('shopping-cart', cartJSON);
