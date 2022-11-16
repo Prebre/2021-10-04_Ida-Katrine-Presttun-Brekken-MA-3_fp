@@ -5,52 +5,39 @@ let cartContainer = document.querySelector('#cart-tablebody');
 
 /* Arrays */
 
-let product = [{
-        title: "Assassin's Creed: Valhalla",
-        price: "599,-",
-        photo: "ACV.jpg",
-        type: "Download for PC",
-        availabe: "Available: Unlimited",
-        reviews: "4/5",
-        rated: "PEGI18",
-        gameURL: "acv.html"
-},
-{
-        title: "Boyfriend Dungeon",
-        price: "TBA",
-        photo: "BD.jpg",
-        type: "Download for PC",
-        availabe: "Available: Unlimited",
-        reviews: "TBA",
-        rated: "TBA",
-        gameURL: "bd.html"
-},
-{
-        title: "Dragon Age: Origins",
-        price: "199,-",
-        photo: "DAO.jpg",
-        type: "DVD-rom for PC",
-        availabe: "Available: Less than 5",
-        reviews: "4/5",
-        rated: "PEGI18",
-        gameURL: "dao.html"
-},
-{
-        title: "Resident Evil Village",
-        price: "699,-",
-        photo: "REVIII.jpg",
-        type: "Download for PC",
-        availabe: "Available: Unlimited",
-        reviews: "5/5",
-        rated: "PEGI18",
-        gameURL: "reviii.html"
-}];
+const url = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wp/v2/product";
+const container = document.querySelector("#game-container");
 
-console.log(product);
+container.innerHTML = "";
+
+async function getProducts() {
+        try {
+                        const response = await fetch(url);
+
+                        const products = await response.json();
+
+                        for(let i = 0; i < products.length; i++) {
+                                        console.log(products[i]);
+
+                                        container.innerHTML += `<div class="game-product">
+                                                        <a href="products.html" class="game-title grid-2" alt="${products[i].title.rendered}"><h3>${products[i].title.rendered}</h3></a>
+                                                        <a href="products.html" class="game-title grid-2" alt="${products[i].title.rendered}"><img src="#" class="cover--small" alt="${products[i].title.rendered} cover art"></a>
+                                                        </div>`
+                        }
+        }
+        catch(error) {
+                        console.log("An error has occurred");
+                        container.innerHTML = "An error has occurred"
+        }
+}
+
+getProducts();
+
+/*console.log(product);*/
 
 /* Generate Product List */
 
-for (let i = 0; i < product.length; i++) {
+/*for (let i = 0; i < product.length; i++) {
         gameContainer.innerHTML += '<div class="game-product">' +
                 '<a href="games/' + product[i].gameURL + '" class="game-title grid-2" alt="' + product[i].title + '">' + product[i].title + '</a><br>' +
                 '<p class="review grid-2">Rated ' + product[i].reviews + '</p>' +
@@ -83,7 +70,7 @@ for (let i = 0; i < product.length; i++) {
                 let product = storageProducts.filter(product => product.productId !== productId);
                 localStorage.setItem('product', JSON.stringify(product));
         }
-};
+};*/
 
 
 
