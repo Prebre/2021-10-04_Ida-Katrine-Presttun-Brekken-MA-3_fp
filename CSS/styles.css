@@ -270,6 +270,7 @@ main {
 
 .crumbs {
   padding-left: 30px;
+  position: fixed;
 }
 
 .info-table table,
@@ -544,6 +545,10 @@ text-align: center;
   grid-column-start: span 2;
 }
 
+.condensed {
+  margin: 0;
+}
+
 .game-title {
   font-size: 1.7rem;
 }
@@ -559,10 +564,12 @@ text-align: center;
 .pricetag {
   color: var(--golden);
   font-family: var(--captain);
-  margin: -5px 0px;
+  border-radius: 15px;
+}
+
+.framed {
   background-color: var(--dusty-night);
   border: 15px solid var(--dusty-night);
-  border-radius: 15px;
 }
 
 .review {
@@ -571,7 +578,6 @@ text-align: center;
   color: var(--dusty-night);
   text-align: center;
   margin: auto;
-  z-index: -1;
 }
 
 .second-hand {

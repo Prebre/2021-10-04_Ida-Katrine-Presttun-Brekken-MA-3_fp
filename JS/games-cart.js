@@ -1,78 +1,140 @@
-/* Containers */
+/* Generate Product List */
 
-let gameContainer = document.querySelector('#game-container');
-let cartContainer = document.querySelector('#cart-tablebody');
+const conKey = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
 
-/* Arrays */
+const conSecr = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
 
-const url = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wp/v2/product";
-const container = document.querySelector("#game-container");
+const gamesURL = `https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products?consumer_key=${conKey}&consumer_secret=${conSecr}`;
 
-container.innerHTML = "";
+const gamesContainer = document.querySelector("#game-container");
 
-async function getProducts() {
+gamesContainer.innerHTML = "";
+
+async function getGames() {
         try {
-                        const response = await fetch(url);
+                const gamesResponse = await fetch(gamesURL);
 
-                        const products = await response.json();
+                const games = await gamesResponse.json();
 
-                        for(let i = 0; i < products.length; i++) {
-                                        console.log(products[i]);
+                for(let i = 0; i < games.length; i++) {
+                        console.log(games[i]);
 
-                                        container.innerHTML += `<div class="game-product">
-                                                        <a href="products.html" class="game-title grid-2" alt="${products[i].title.rendered}"><h3>${products[i].title.rendered}</h3></a>
-                                                        <a href="products.html" class="game-title grid-2" alt="${products[i].title.rendered}"><img src="#" class="cover--small" alt="${products[i].title.rendered} cover art"></a>
-                                                        </div>`
-                        }
+                        gamesContainer.innerHTML += `<div class="game-product">
+                                <a href="product.html?id=${games[i].id}" class="game-title grid-2" alt="${games[i].name}">${games[i].name}</a>
+                                <p class="review grid-2">${games[i].attributes[1].name} ${games[i].average_rating}</p>
+                                <a href="product.html?id=${games[i].id}" class="game-title grid-2" alt="${games[i].name}"><img src="${games[i].images[0].src}" class="cover--small" alt="${games[i].name} cover art"></a>
+                                <p class="condensed grid-2">${games[i].attributes[2].options[0]}</p>
+                                <p class="pricetag condensed grid-2">$ ${games[i].price}</p>
+                                <p class="condensed grid-2">${games[i].attributes[1].options[0]}</p>
+                                <div class="cart-add grid-2">
+                                        <label for="amount"></label>
+                                        <select name="amount" class="game-amount">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <input type="submit" value="Add" class="cta add-to-cart" onClick="addToCart(this)" />
+                                </div>`
+
+                                                        
+                }
         }
         catch(error) {
-                        console.log("An error has occurred");
-                        container.innerHTML = "An error has occurred"
+                console.log("An error has occurred");
+                gamesContainer.innerHTML = "An error has occurred"
         }
 }
 
-getProducts();
+getGames();
 
-/*console.log(product);*/
 
-/* Generate Product List */
+/* Generate Product Page */
 
-/*for (let i = 0; i < product.length; i++) {
-        gameContainer.innerHTML += '<div class="game-product">' +
-                '<a href="games/' + product[i].gameURL + '" class="game-title grid-2" alt="' + product[i].title + '">' + product[i].title + '</a><br>' +
-                '<p class="review grid-2">Rated ' + product[i].reviews + '</p>' +
-                '<a href="games/' + product[i].gameURL + '" class="game-title grid-2" alt="' + product[i].title + '"><img src="products/' + product[i].photo + '" class="cover--small" alt="' + product[i].title + ' cover art"></a><br>' +
-                '<p class="grid-2">' + product[i].type + '</p>' +
-                '<p class="pricetag grid-2">$<span>' + product[i].price + '</span></p>' +
-                '<p class="grid-2">' + product[i].rated + '</p>' +
-                '<div class="cart-add grid-2">' +
-                        '<label for="amount"></label>' +
-                        '<select name="amount" class="game-amount">'+
-                        '<option value="1">1</option>' +
-                        '<option value="2">2</option>' +
-                        '<option value="3">3</option>' +
-                        '<option value="4">4</option>' +
-                        '<option value="5">5</option>' +
-                        '<input type="submit" value="Add" class="cta add-to-cart" onClick="addToCart(this)" />'+
-                '</div>'
-        '</div>';
+const queryString = document.location.search;
 
-        function addToCart() {
-                if(localStorage.getItem('product')) {
-                        product = JSON.parse(localStorage.getItem('product'));
+const parameters = new URLSearchParams(queryString);
+
+const code = parameters.get("id");
+
+const productURL = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wp/v2/product" + id
+
+const productContainer = document.querySelector(".info-table")
+
+let h1 = document.querySelector("h1");
+
+async function fetchProduct() {
+
+        try {
+
+                const productResponse = await fetch(productURL);
+
+                const product = await productResponse.json();
+
+                for(let j = 0; j < product.length; j++) {
+
+                        console.log(product[j]);
+
+                        productContainer.innerHTML = `<table>
+                                <tr class="border-top">
+                                        <td rowspan="6">
+                                                <img src="${product[j].images[0].src}" alt="${product[j].name} Cover" class="sover--big">
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                                <p class="italic">${product[j].attributes[4].name} ${product[j].attributes[4].options[0]}</p>
+                                        </td>
+                                        <td>
+                                                <p class="italic">Product number: 000004</p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                                <p class="review"><img src="../icons/star-filled.png" alt="Filled star icon">
+                                                <img src="../icons/star-filled.png" alt="Filled star icon">
+                                                <img src="../icons/star-filled.png" alt="Filled star icon">
+                                                <img src="../icons/star-filled.png" alt="Filled star icon">
+                                                <img src="../icons/star-empty.png" alt="Empty star icon"></p>
+                                        </td>
+                                        <td>
+                                                <a href="*" class="italic">Read reviews</a>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                                <p class="pricetag">599,-</p>
+                                        </td>
+                                        <td>
+                                                <a href="*" title="Add product"><button class="cta">Add</button></a>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                                <p>Type: Download for PC</p>
+                                        </td>
+                                        <td>
+                                                <p>Available: Unlimited</p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td>
+                                                <p>Developer: Ubisoft</p>
+                                        </td>
+                                        <td>
+                                                <p>Rated: PEGI18</p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <td colspan="3">
+                                                <h2>Build your own viking legend</h2>
+                                                <p class="game-desc">Become Eivor, a Viking raider raised to be a fearless warrior, and lead your clan from icy desolation in Norway to a new home amid the lush farmlands of ninth-century England. Find your settlement and conquer this hostile land by any means to earn a place in Valhalla.</p>
+                                        </td>
+                                </tr>
+                        </table>`
                 }
-                product.push({'productId' : product.id + 1, image : product.gameURL});
-                localStorage.setItem('product', JSON.stringify(product));
         }
-
-        function removeFromCart() {
-                let storageProducts = JSON.parse(localStorage.getItem('product'));
-                let product = storageProducts.filter(product => product.productId !== productId);
-                localStorage.setItem('product', JSON.stringify(product));
-        }
-};*/
-
-
+}
 
 
 
