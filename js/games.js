@@ -1,24 +1,26 @@
 /* Generate Product List */
 
-const conKey = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
+const api = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products";
 
-const conSecr = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
+const key = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
 
-const gamesURL = `https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products?consumer_key=${conKey}&consumer_secret=${conSecr}`;
+const secret = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
 
-const gamesContainer = document.querySelector("#game-container");
+const gameURL = api + `?consumer_key=${key}&consumer_secret=${secret}`;
 
-gamesContainer.innerHTML = "";
+const gameContainer = document.querySelector("#game-container");
+
+gameContainer.innerHTML = "";
 
 async function getGames() {
         try {
-                const gamesResponse = await fetch(gamesURL);
+                const gameResponse = await fetch(gameURL);
 
-                const games = await gamesResponse.json();
+                const games = await gameResponse.json();
 
                 for(let i = 0; i < games.length; i++) {
 
-                        gamesContainer.innerHTML += `<div class="game-product">
+                        gameContainer.innerHTML += `<div class="game-product">
                                 <a href="product.html?id=${games[i].id}" class="game-title grid-2" alt="${games[i].name}">${games[i].name}</a>
                                 <p class="review grid-2">${games[i].attributes[1].name} ${games[i].average_rating}</p>
                                 <a href="product.html?id=${games[i].id}" class="game-title grid-2" alt="${games[i].name}"><img src="${games[i].images[0].src}" class="cover--small" alt="${games[i].name} cover art"></a>
@@ -41,7 +43,7 @@ async function getGames() {
         }
         catch(error) {
                 console.log("An error has occurred");
-                gamesContainer.innerHTML = "An error has occurred"
+                gameContainer.innerHTML = "An error has occurred"
         }
 }
 

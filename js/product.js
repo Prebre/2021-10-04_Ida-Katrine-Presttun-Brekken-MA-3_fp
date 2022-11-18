@@ -1,6 +1,10 @@
 /* Generate Product Page */
 
-const productContainer = document.querySelector(".info-table")
+const api = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products";
+
+const key = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
+
+const secret = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
 
 const queryString = document.location.search;
 
@@ -10,17 +14,15 @@ const id = parameters.get("id");
 
 console.log(id);
 
-const conKey = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
+const productURL = api + `/` + id + `?consumer_key=${key}&consumer_secret=${secret}`
 
-const conSecr = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
-
-const productURL = `https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products/` + id + `?consumer_key=${conKey}&consumer_secret=${conSecr}`
+const productContainer = document.querySelector(".info-table")
 
 let h1 = document.querySelector("h1");
 
 let title = document.querySelector("title");
 
-async function fetchProduct() {
+async function getProduct() {
 
     try {
 
@@ -28,35 +30,35 @@ async function fetchProduct() {
 
         const product = await productResponse.json();
 
-            for(let i = 0; i < product.length; i++) {
+            for(let j = 0; j < product.length; j++) {
 
                 console.log(product);
 
                 productContainer.innerHTML += `<table>
                     <tr class="border-top">
                         <td rowspan="6">
-                            <img src="${product[i].images[0].src}" alt="${product[i].name} Cover" class="cover--big">
+                            <img src="${product[j].images[0].src}" alt="${product[j].name} Cover" class="cover--big">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p class="italic">${product[i].attributes[4].name} ${product[i].attributes[4].options[0]}</p>
+                            <p class="italic">${product[j].attributes[4].name} ${product[j].attributes[4].options[0]}</p>
                         </td>
                         <td>
-                            <p class="italic">${product[i].attributes[4].name} ${product[i].attributes[4].options[0]}</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="review">${product[i].average_rating}</p>
-                        </td>
-                        <td>
-                            <a href="*" class="italic">Read reviews (${product[i].rating_count}</a>
+                            <p class="italic">${product[j].attributes[4].name} ${product[j].attributes[4].options[0]}</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p class="pricetag">$ ${product[i].price}</p>
+                            <p class="review">${product[j].average_rating}</p>
+                        </td>
+                        <td>
+                            <a href="*" class="italic">Read reviews (${product[j].rating_count}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="pricetag">$ ${product[j].price}</p>
                         </td>
                         <td>
                             <a href="*" title="Add product"><button class="cta">Add</button></a>
@@ -64,29 +66,29 @@ async function fetchProduct() {
                     </tr>
                     <tr>
                         <td>
-                            <p>${product[i].attributes[2].name} ${product[i].attributes[2].options[0]}</p>
+                            <p>${product[j].attributes[2].name} ${product[j].attributes[2].options[0]}</p>
                         </td>
                         <td>
-                            <p>${product[i].attributes[3].name} ${product[i].attributes[3].options[0]}</p>
+                            <p>${product[j].attributes[3].name} ${product[j].attributes[3].options[0]}</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <p>${product[i].attributes[0].name} ${product[i].attributes[0].options[0]}</p>
+                            <p>${product[j].attributes[0].name} ${product[j].attributes[0].options[0]}</p>
                         </td>
                         <td>
-                            <p>${product[i].attributes[1].name} ${product[i].attributes[1].options[0]}</p>
+                            <p>${product[j].attributes[1].name} ${product[j].attributes[1].options[0]}</p>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="3">
-                            ${product[i].description}
+                            ${product[j].description}
                         </td>
                     </tr>
                 </table>`
                 
-                title.innerHTML += `Game Hub | ${product[i].name}`
-                h1.innerHTML += `${product[i].name}`
+                title.innerHTML += `Game Hub | ${product[j].name}`
+                h1.innerHTML += `${product[j].name}`
                 }
     }
     catch(error) {
@@ -95,4 +97,4 @@ async function fetchProduct() {
     }
 }
 
-fetchProduct();
+getProduct();
