@@ -1,0 +1,94 @@
+/* Generate Product Page */
+
+const conKey = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
+
+const conSecr = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
+
+const queryString = document.location.search;
+
+const parameters = new URLSearchParams(queryString);
+
+const id = parameters.get("id");
+
+const productURL = `https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products/` + id + `?consumer_key=${conKey}&consumer_secret=${conSecr}`
+
+const productContainer = document.querySelector(".info-table")
+
+let h1 = document.querySelector("h1");
+
+let title = document.querySelector("title");
+
+async function fetchProduct() {
+
+    try {
+
+        const productResponse = await fetch(productURL);
+
+        const product = await productResponse.json();
+
+            for(let i = 0; i < product.length; i++) {
+
+                productContainer.innerHTML = `<table>
+                    <tr class="border-top">
+                        <td rowspan="6">
+                            <img src="${product[i].images[0].src}" alt="${product[i].name} Cover" class="sover--big">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="italic">${product[i].attributes[4].name} ${product[i].attributes[4].options[0]}</p>
+                        </td>
+                        <td>
+                            <p class="italic">${product[i].attributes[4].name} ${product[i].attributes[4].options[0]}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="review">${product[i].average_rating}</p>
+                        </td>
+                        <td>
+                            <a href="*" class="italic">Read reviews (${product[i].rating_count}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="pricetag">$ ${product[i].price}</p>
+                        </td>
+                        <td>
+                            <a href="*" title="Add product"><button class="cta">Add</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>${product[i].attributes[2].name} ${product[i].attributes[2].options[0]}</p>
+                        </td>
+                        <td>
+                            <p>${product[i].attributes[3].name} ${product[i].attributes[3].options[0]}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>${product[i].attributes[0].name} ${product[i].attributes[0].options[0]}</p>
+                        </td>
+                        <td>
+                            <p>${product[i].attributes[1].name} ${product[i].attributes[1].options[0]}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            ${product[i].description}
+                        </td>
+                    </tr>
+                </table>`
+                
+                title.innerHTML = `Game Hub | ${product[i].name}`
+                h1.innerHTML = `${product[i].name}`
+                }
+    }
+    catch(error) {
+                    console.log("An error has occurred");
+                    gamesContainer.innerHTML = "An error has occurred"
+    }
+}
+
+fetchProduct();
