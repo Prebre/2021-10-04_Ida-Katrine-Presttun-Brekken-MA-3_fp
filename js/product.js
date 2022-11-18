@@ -1,8 +1,6 @@
 /* Generate Product Page */
 
-const conKey = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
-
-const conSecr = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
+const productContainer = document.querySelector(".info-table")
 
 const queryString = document.location.search;
 
@@ -10,9 +8,13 @@ const parameters = new URLSearchParams(queryString);
 
 const id = parameters.get("id");
 
-const productURL = `https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products/` + id + `?consumer_key=${conKey}&consumer_secret=${conSecr}`
+console.log(id);
 
-const productContainer = document.querySelector(".info-table")
+const conKey = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
+
+const conSecr = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
+
+const productURL = `https://ikpb-mar21pt-cms-ma1.com/wp-json/wc/v2/products/` + id + `?consumer_key=${conKey}&consumer_secret=${conSecr}`
 
 let h1 = document.querySelector("h1");
 
@@ -28,10 +30,12 @@ async function fetchProduct() {
 
             for(let i = 0; i < product.length; i++) {
 
-                productContainer.innerHTML = `<table>
+                console.log(product);
+
+                productContainer.innerHTML += `<table>
                     <tr class="border-top">
                         <td rowspan="6">
-                            <img src="${product[i].images[0].src}" alt="${product[i].name} Cover" class="sover--big">
+                            <img src="${product[i].images[0].src}" alt="${product[i].name} Cover" class="cover--big">
                         </td>
                     </tr>
                     <tr>
@@ -81,13 +85,13 @@ async function fetchProduct() {
                     </tr>
                 </table>`
                 
-                title.innerHTML = `Game Hub | ${product[i].name}`
-                h1.innerHTML = `${product[i].name}`
+                title.innerHTML += `Game Hub | ${product[i].name}`
+                h1.innerHTML += `${product[i].name}`
                 }
     }
     catch(error) {
                     console.log("An error has occurred");
-                    gamesContainer.innerHTML = "An error has occurred"
+                    productContainer.innerHTML = "An error has occurred"
     }
 }
 
