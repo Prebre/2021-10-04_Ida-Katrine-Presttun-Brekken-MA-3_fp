@@ -489,6 +489,13 @@ label {
   text-align: center;
 }
 
+.info {
+  flex-basis: 500px;
+  margin: 30px auto 30px auto;
+  background-color: var(--dusty-night);
+  border-radius: 15%;
+}
+
 /******************** ACCOUNT PROFILE ********************/
 
 .container {
@@ -833,11 +840,9 @@ text-align: center;
   font-size: 1.5em;
 }
 
-  .info {
-    padding: 2% 15%;
-  }
-
-  
+.info {
+  padding: 30px 60px;
+}
 
 .crumbs {
   padding-top: 20px;
@@ -1083,7 +1088,7 @@ text-align: center;
   }
 
   .info {
-    padding: 1% 26%;
+    padding: 50px 100px;
   }
 
   .left-align {
