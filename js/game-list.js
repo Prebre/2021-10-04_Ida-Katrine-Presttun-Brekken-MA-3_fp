@@ -1,6 +1,6 @@
 /* Generate Product List */
 
-import { listURL } from "./constants/api";
+import { listURL } from "./constants/api.js";
 
 const listContainer = document.querySelector("#game-container");
 
