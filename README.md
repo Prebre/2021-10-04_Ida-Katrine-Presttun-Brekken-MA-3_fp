@@ -1,33 +1,70 @@
-# 2021-10-04_Ida-Katrine-Presttun-Brekken-MA-3_fp
+# Your project title
 
-Module Assignment 3, Game Hub Homepage
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
-DEVELOPER COMMENT
-This is my first attempt at creating a web page with specific instruction based on my own design. This project is part of my learning process towards becoming a Front-end Developer, and is a module assignment for my studies at Noroff School of Technology and Digital Media. It shall not be used for any other purpose than for me to practise and improve my skills with HTML and CSS.
+A simple overview of the use/purpose of the project.
 
-ASSIGNMENT INFO
-Goal
-To deliver a responsive version of your home page for your cross-course project of the website you designed in Design 1.
+## Description
 
-Brief
-You have been tasked with developing the home page of the prototype you built in Design 1.
+Add a more detailed description of what your project entails and set out to do.
 
-The home page should:
+You can add some bullet points if you'd like to:
 
-- Be responsive across screen sizes
-- Use neat and semantic HTML
-- Have CSS that follows the DRY principle
+- List item 1
+- List item 2
+- List item 3
 
-Level 1 Process
+## Built With
 
-1. Create the HTML for your home page. Use HTML5 elements where appropriate and remember to write unique titles and meta descriptions for the page, as well as ensure your pages are WCAG compliant.
-2. Create a CSS file which is linked to your home page.
-3. Consider how your page will look across various screen sizes (eg. Single column on mobile, multi-column on larger screens).
-4. Write your CSS following the DRY principle.
-5. Ensure you’re making regular commits to your repository. Remember, you can view the files locally on your computer before your push changes to your repository.
-6. Submit a link to the deployed site on Netlify.
+You can list a the tech stack that you've used over here
 
-Additional Comments
-For your Course Assignment for this course, you will deliver a functional, responsive website of the prototype, but for now we’re just focusing on the home page. You can add other pages to your repository, but the focus will be on the home page.
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
 
-Certain aspects of your original design might not be possible without JavaScript, and you can either leave these off the HTML and CSS submission or use techniques (like the checkbox hack) to mimic the interactions. For example, you might have an add-to-cart interaction. This can be achieved using the checkbox hack like so https://jsfiddle.net/MJPhillip/0a5vqk43/
+## Getting Started
+
+### Installing
+
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
+
+## License
+
+You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+
+## Acknowledgments
+
+This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
